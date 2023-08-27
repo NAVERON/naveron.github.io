@@ -1,7 +1,6 @@
-title: Eron Visual Studio
-description: NAVERON blogs
+title: 玉龙视效工作室
+description: 玉龙个人网站博客聚集地
 theme: just-the-docs
-
 # logo: "https://avatars.githubusercontent.com/u/14134183?v=4"
 url: https://naveron.github.io/
 
@@ -9,17 +8,57 @@ aux_links:
   NAVERON GITHUB: https://github.com/NAVERON/naveron.github.io
 aux_links_new_tab: true
 
-mermaid:
-  # Version of mermaid library
-  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "10.4.0"
+nav_external_links:
+  - title: naveron
+    url: "https://github.com/NAVERON"
 
 color_scheme: dark
 
+# Version of mermaid library
+mermaid:
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "10.4.0"
 
 # For copy button on code blocks
 enable_copy_code_button: true
 
+# callout configs
+callouts:
+  admonition:
+    # title:
+    color: grey-lt
+  attention:
+    title: Attention
+    color: purple
+  caution:
+    title: Caution
+    color: yellow
+  danger:
+    title: Danger
+    color: red
+  error:
+    title: Error
+    color: red
+  highlight:
+    color: yellow
+    opacity: 0.5
+  hint:
+    title: Hint
+    color: grey-dk
+  important:
+    title: Important
+    color: green
+  note:
+    title: Note
+    color: blue
+    # color: pink
+    opacity: 0.3
+  tip:
+    title: Tip
+    color: grey-dk
+  warning:
+    title: Warning
+    color: red
 
 
 
