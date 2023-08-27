@@ -1,8 +1,26 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Eron Visual Studio
+description: NAVERON blogs
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+# logo: "https://avatars.githubusercontent.com/u/14134183?v=4"
+url: https://naveron.github.io/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  NAVERON GITHUB: https://github.com/NAVERON/naveron.github.io
+aux_links_new_tab: true
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "10.4.0"
+
+color_scheme: dark
+
+
+# For copy button on code blocks
+enable_copy_code_button: true
+
+plugins:
+  - jekyll-default-layout
+
+
