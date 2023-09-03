@@ -1,6 +1,6 @@
 ---
-title: Hardware
-layout: default
+title: hardware
+layout: about
 nav_order: 3
 has_children: true
 ---
