@@ -1,7 +1,7 @@
 ---
-title: RaspberryInstall
+title: raspberry install
 layout: post
-parent: Hardware
+parent: hardware
 ---
 
 # 树莓派系统的安装和设置 
@@ -23,4 +23,8 @@ parent: Hardware
 - lua
 - rust  
 - ...
+
+## 遗留问题  
+
+如果外部环境变化, 如`wifi`网络无法连接， 如何直接使用网线连接笔记本直接登录控制 ?  
 
