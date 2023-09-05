@@ -15,14 +15,14 @@ ERON VISUAL STUDIO (**EVS**)
 
 才疏学浅, 贻笑大方
 
-#### 关于我自己 
+### 关于我自己 
 
-- [ ] 我的简介[NAVERON](https://github.com/NAVERON/NAVERON){: .btn .btn-purple }  
-- [ ] 随笔资料心得[ERON](https://github.com/NAVERON/ERON){: .btn .btn-purple }  
-- [ ] 开发环境重建脚本[CONFIG](https://github.com/NAVERON/CONFIG){: .btn .btn-purple }  
+- [ ] 我的简介[NAVERON](https://github.com/NAVERON/NAVERON)  
+- [ ] 随笔资料心得[ERON](https://github.com/NAVERON/ERON)  
+- [ ] 开发环境重建脚本[CONFIG](https://github.com/NAVERON/CONFIG)  
 - [ ] ......
 
-#### 主要项目 
+### 主要项目 
 
 - [ShipSimulation](https://github.com/NAVERON/ShipSimulation)  
 - [ArbitraryCoding](https://github.com/NAVERON/ArbitraryCoding)  
@@ -33,7 +33,7 @@ ERON VISUAL STUDIO (**EVS**)
 
 十步杀一人, 千里不留行. 事了拂衣去, 深藏身与名
 
-#### 文档头
+### 文档头
 
 一般一个父级路径下包含多个子文档， 形成多级菜单
 
@@ -73,7 +73,7 @@ grand_parent: Layout  # 上上级路径
 ---
 ```
 
-#### 布局设置
+### 布局设置
 
 `just-the-doc` 提供了基于jekyll的布局使用, 当前有以下几个布局的样式 : 
 
@@ -84,7 +84,7 @@ grand_parent: Layout  # 上上级路径
 - page
 - post
 
-#### 绘图工具  
+### 绘图工具  
 
 **Github支持的绘图** : [Write On Github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github)  
 
