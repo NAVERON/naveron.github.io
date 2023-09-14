@@ -4,7 +4,7 @@ layout: post
 parent: learning
 ---
 
-# git 基本操作和理解
+# git
 
 ## git 资料
 

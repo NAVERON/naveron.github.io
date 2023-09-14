@@ -1,5 +1,5 @@
 ---
-title: raspberry install
+title: raspberry pi install
 layout: post
 parent: hardware
 ---
