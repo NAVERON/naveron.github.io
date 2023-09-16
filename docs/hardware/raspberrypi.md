@@ -1,5 +1,5 @@
 ---
-title: raspberry install
+title: raspberry pi install
 layout: post
 parent: hardware
 ---
@@ -27,4 +27,23 @@ parent: hardware
 ## 遗留问题  
 
 如果外部环境变化, 如`wifi`网络无法连接， 如何直接使用网线连接笔记本直接登录控制 ?  
+
+# 树莓派一些资料 
+
+> [https://rpi.thibmaek.com/](https://github.com/thibmaek/awesome-raspberry-pi) : 关于树莓派的系统, 工具, 项目资料  
+> https://github.com/Botspot/pi-apps : 树莓派应用商店, 如果子级有开原的树莓派app, 可以上架商店方便其他人使用  
+> https://github.com/raspberrypi/documentation : 树莓派官方文档  
+> https://github.com/wwj718/awesome-raspberry-pi-zh : 中文资料 
+
+## 一些有趣的树莓派项目
+
+### pi temperature
+
+> 树莓派查看cpu gpu温度的检测小程序
+
+github : https://github.com/s-nagaev/pi-temperature-exporter  
+docker : `docker pull pysergio/pi-temp-exporter`  
+
+
+
 
