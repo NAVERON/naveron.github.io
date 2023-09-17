@@ -1,7 +1,6 @@
 ---
 title: about
 layout: home
-nav_order: 1
 ---
 
 # 玉龙视觉效果工作室
@@ -89,4 +88,21 @@ grand_parent: Layout  # 上上级路径
 **Github支持的绘图** : [Write On Github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github)  
 
 **mermaid绘图工具的使用**  : [Mermaid Start](https://mermaid.js.org/intro/)  
+
+### 搜索整理
+
+因为使用中文无法提供搜索, 所以使用分类标签实现每个文档的类别标记, 方便查找  
+每一个文档大标题下面增加`Label`标示, 后期可以根据Label标签快速搜索和整理  
+
+demo label ...  
+{: .label .label-green}  
+
+```markdown
+custome label
+{: .label .label-blue}
+
+others colors
+.label-green .label-purple .label-yellow .label-red
+```
+
 

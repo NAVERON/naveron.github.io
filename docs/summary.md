@@ -1,8 +1,13 @@
 ---
 title: eron's resume
 layout: home
-nav_order: 2
 ---
+
+resume
+{: .label}
+
+career
+{: .label .label-gree}
 
 # 王玉龙 - 软件工程师 **:wave:** 
 

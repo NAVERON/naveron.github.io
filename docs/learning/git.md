@@ -1,8 +1,11 @@
 ---
-title: git deep learning
+title: git
 layout: post
 parent: learning
 ---
+
+git  
+{: .label}
 
 # git
 
