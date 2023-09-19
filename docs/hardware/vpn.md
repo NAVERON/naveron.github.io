@@ -1,11 +1,11 @@
 ---
-title: vpn/clash
+title: vpn clash
 layout: post
 parent: hardware
 ---
 
 vpn  
-{: .label}
+{: .label .label-red}
 
 # ssr dog
 
