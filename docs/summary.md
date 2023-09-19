@@ -1,6 +1,6 @@
 ---
 title: eron's resume
-layout: home
+layout: default
 ---
 
 resume

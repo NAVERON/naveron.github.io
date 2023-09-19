@@ -1,5 +1,5 @@
 ---
-title: raspberrypi
+title: raspberry pi
 layout: post
 parent: hardware
 ---
