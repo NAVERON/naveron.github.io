@@ -17,7 +17,7 @@ color_scheme: dark
 # Version of mermaid library
 mermaid:
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.6"
+  version: "10.4.0"
 
 # For copy button on code blocks
 enable_copy_code_button: true

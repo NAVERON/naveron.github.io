@@ -1,7 +1,7 @@
 ---
 title: mermaid
 layout: post
-parent: learning
+parent: program
 ---
 
 mermaid  

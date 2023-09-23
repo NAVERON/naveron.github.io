@@ -1,7 +1,7 @@
 ---
 title: docker
 layout: post
-parent: learning
+parent: program
 ---
 
 docker  
