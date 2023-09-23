@@ -1,7 +1,7 @@
 ---
 title: vpn clash
 layout: post
-parent: hardware
+parent: system
 ---
 
 vpn  

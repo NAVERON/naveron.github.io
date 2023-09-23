@@ -1,7 +1,7 @@
 ---
 title: raspberry pi
 layout: post
-parent: hardware
+parent: system
 ---
 
 raspberry pi  

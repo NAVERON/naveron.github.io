@@ -1,7 +1,7 @@
 ---
 title: mermaid
 layout: post
-parent: program
+parent: blogs
 ---
 
 mermaid  
@@ -371,6 +371,9 @@ gitGraph
 ```
 
 
+## actually scene usage
+
+> 实际场景中的表达实践, 将之前的思路完整使用编程绘图语言描述  
 
 ## other similar
 

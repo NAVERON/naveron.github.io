@@ -1,7 +1,7 @@
 ---
 title: linux related
 layout: post
-parent: hardware
+parent: system
 ---
 
 linux  
