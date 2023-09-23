@@ -1,5 +1,5 @@
 ---
-title: learning
+title: program
 layout: about
 has_children: true
 ---

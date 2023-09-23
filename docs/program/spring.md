@@ -1,7 +1,7 @@
 ---
 title: spring framework
 layout: post
-parent: learning
+parent: program
 ---
 
 spring  

@@ -1,7 +1,7 @@
 ---
 title: git
 layout: post
-parent: learning
+parent: program
 ---
 
 git  
