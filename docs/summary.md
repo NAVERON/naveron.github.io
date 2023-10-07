@@ -3,11 +3,7 @@ title: eron's resume
 layout: default
 ---
 
-resume
-{: .label}
-
-career
-{: .label .label-gree}
+resume{: .label }  career{: .label .label-gree }
 
 # 我的简历
 
