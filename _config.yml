@@ -63,7 +63,6 @@ callouts:
 plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
-  - jekyll-default-layout
 
 
 
