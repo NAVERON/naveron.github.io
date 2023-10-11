@@ -60,6 +60,61 @@ docker : `docker pull pysergio/pi-temp-exporter`
 
 > [pi for java](https://pi4j.com/about/) : Java包 为操作树莓派的io硬件  
 
+## 树莓派的案例  
+
+[Raspberry Pi Hardware Programming with Python](http://radiostud.io/raspberrypi-hardware-interface-programming-python/)  
+Raspbian Wheezy  
+The RPi.GPIO module is installed by default in Raspbian. To make sure that it is at the latest version:  
+
+```shell
+$ sudo apt-get update
+$ sudo apt-get install python-rpi.gpio python3-rpi.gpio
+```
+
+To install the latest development version from the project source code library:  
+
+```shell
+$ sudo apt-get install python-dev python3-dev
+$ sudo apt-get install mercurial
+$ sudo apt-get install python-pip python3-pip
+$ sudo apt-get remove python-rpi.gpio python3-rpi.gpio
+$ sudo pip install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
+$ sudo pip-3.2 install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
+```
+
+To revert back to the default version in Raspbian:
+
+```shell
+$ sudo pip uninstall RPi.GPIO
+$ sudo pip-3.2 uninstall RPi.GPIO
+$ sudo apt-get install python-rpi.gpio python3-rpi.gpio
+```
+
+Other Distributions  
+It is recommended that you install RPi.GPIO using the pip utility as superuser (root):  
+
+```shell
+# pip install RPi.GPIO
+```
+
+### 其他案例
+
+[网页远程控制树莓派LED信号](https://www.pubnub.com/blog/2015-06-11-remote-control-raspberry-pi-leds-from-a-web-browser-ui/)  
+[模拟信号案例](http://radiostud.io/sensing-analog-signal-raspberrypi/?utm_source=rpi-py-res-page&utm_medium=analoginput&utm_campaign=rpi-hwintf&doing_wp_cron=1525790331.7828059196472167968750)  
+
+# 一些硬件的保养  
+
+## 电量检测
+
+显示器朝向自己，电池插头**没有箭头**的朝向自己，显示电量
+购买BB响截图
+![电量检测](../pics/tools/电量检测.png)  
+
+## 电池电压
+![电池电压，避免长时间不用，应当每月放电充电](../pics/tools/电池使用.png)  
+
+## 充电器使用
+![充电器](obsidian://open?vault=naveron.github.io&file=assert%2Fimages%2Ftools%2F%E5%B9%B3%E8%A1%A1%E5%85%85%E7%94%B5%E5%99%A8.png)  
 
 
 
