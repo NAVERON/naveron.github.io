@@ -5,7 +5,7 @@ parent: program
 ---
 
 spring  
-{: .label}
+{: .label }
 
 # about 
 

@@ -5,7 +5,7 @@ parent: program
 ---
 
 docker  
-{: .label}  
+{: .label }  
 
 # docker 
 

@@ -5,5 +5,5 @@ has_children: true
 ---
 
 future  
-{: .label .label-green}
+{: .label .label-green }
 

@@ -39,9 +39,12 @@ asciinema rec|play|cat|upload|auth file.cast
 # 其中rec录制 play重放 auth 绑定线上帐号 upload上床并声称一个线上链接  
 ```
 
+## jq  
 
+jq = json query, a shell command tools. url : [JQ](https://stedolan.github.io/jq/)  
 
+## repo
 
-
+repo = multi repo manager, from google. url : [Repo](https://source.android.com/setup/develop/repo)  
 
 

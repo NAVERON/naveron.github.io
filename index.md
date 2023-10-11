@@ -5,10 +5,8 @@ layout: home
 
 # 玉龙视觉效果工作室
 
-一个属于自己的天地
-
 {: .important-title }  
-> 玉龙视觉效果工作室 (**玉龙视效工作室**)  
+> 一个属于自己的天地 : **玉龙视效工作室**  
 > 
 > [ERON VISUAL STUDIO (**EVS**)](https://github.com/NAVERON){: .btn .btn-green }  
 

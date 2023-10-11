@@ -5,7 +5,7 @@ parent: program
 ---
 
 http  
-{: .label .label-gree}
+{: .label .label-gree }
 
 httpie  
 {: .label}

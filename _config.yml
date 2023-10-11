@@ -5,12 +5,14 @@ theme: just-the-docs
 url: https://naveron.github.io/
 
 aux_links:
-  NAVERON GITHUB: https://github.com/NAVERON/naveron.github.io
+  NAVERON GITHUB: https://github.com/NAVERON
 aux_links_new_tab: true
 
 nav_external_links:
-  - title: eron's profile
-    url: "https://github.com/NAVERON"
+  - title: evs on github
+    url: "https://github.com/NAVERON/naveron.github.io"
+    hide_icon: false
+    opens_in_new_tab: true
 
 color_scheme: dark
 
