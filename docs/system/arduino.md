@@ -2,6 +2,7 @@
 title: arduino
 layout: post
 parent: system
+math: mathjax
 ---
 
 # Arduino C语法
