@@ -2,6 +2,7 @@
 title: mathjax
 layout: post
 parent: note
+math: mathjax
 ---
 
 # MathJax basic tutorial and quick reference
