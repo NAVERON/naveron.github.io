@@ -80,14 +80,14 @@ void loop() 连续执行函数内的语句
 
 ![2示意图](../../assert/images/tools/sensor_1.png)  
 
-如图所示，有$$Ax = g \sin \alpha, Ay = g \cos \alpha, then \frac{Ax}{Ay} = \tan \alpha$$, 即$$\alpha = \arctan(\frac{Ax}{Ay})$$  
+如图所示，有$$Ax = g \sin \alpha, Ay = g \cos \alpha, then \frac{Ax}{Ay} = \tan \alpha$$, 即 $$\alpha = \arctan(\frac{Ax}{Ay})$$  
 这样，就可以根据在x、y轴上的加速度求取倾斜角度  
 
 > 注意：这是静止状态，运动过程需要提高采样频率  
 
 **二维平面具有局限性，所以使用3维的加速度计算**  
 
-与上面类似的计算过程，可以得出倾斜角度公式  {% raw %} $$ \alpha = \arctan( \frac {\sqrt{ {Ax}^2+{Az}^2 } } {Ay} )$$ {% endraw %}  
+与上面类似的计算过程，可以得出倾斜角度公式  $$\alpha = \arctan(\frac {\sqrt{ {Ax}^2+{Az}^2 }} {Ay})$$  
 
 ![3维示意图](../../assert/images/tools/sensor_2.png)  
 
