@@ -1,7 +1,7 @@
 ---
 title: mathjax
-layout: post
 parent: note
+layout: mathjax
 ---
 
 # MathJax basic tutorial and quick reference
@@ -15,11 +15,14 @@ parent: note
 
 ## 行内公式和行间公式
 
+> 备注 : 因为`just-the-docs`支持问题, 使用`$...$`行内公式无法正常使用, 全部使用`$$...$$`展示公式内容  
+> github直接对`$...$`语法的支持也有限， 似乎什与什么规则冲突  
+
 对行内公式，把公式放在`$...$`之内，对于展示公式，使用`$$...$$`
-行内公式测试 $\sum_{i=0}^n i^2 = \frac { (n^2+n)(2n+1) }{6}$ 显示在行内
+行内公式测试 $$\sum_{i=0}^n i^2 = \frac { (n^2+n)(2n+1) }{6}$$ 显示在行内
 显示行间公式
 
-```MathJax
+```latex
 $$ \sum_{ i = 0}^n i^2 = \frac{ (n^2+n)(2n+1)} {6} $$
 ```
 
@@ -27,51 +30,53 @@ $$ \sum_{ i = 0}^n i^2 = \frac{ (n^2+n)(2n+1)} {6} $$
 
 ## 希腊字符是表示
 
-对于Greek希腊字符，使用 `\alpha`, `\beta `, ..., ` \omega `:  $\alpha, \beta, ..., \omega$
-对于大写字符, `Delta`, `Omega`, `\Gamma`, $\Delta, \Omega, \Gamma$
+对于Greek希腊字符，使用 `\alpha`, `\beta `, ..., ` \omega `:  $$\alpha, \beta, ..., \omega$$  
+对于大写字符, `Delta`, `Omega`, `\Gamma`, $$\Delta, \Omega, \Gamma$$
 
 ## 上标和下标
 
-对于上标和下表使用`^`, `_`, 例如，`x_i^2` : $x_i^2$, `\log_2 x` : $\log_2 x$
+对于上标和下表使用`^`, `_`, 例如，`x_i^2` : $$x_i^2$, `\log_2 x` : $\log_2 x$$
 
 ## 编组Groups，使用{}
 
-一些例子，`10^10`: $10^10$，显示不正确，应当--> `10^{10}`: $10^{10}$
-`{x^y}^z`: ${x^y}^z$
+一些例子，`10^10`: $10^10$，显示不正确，应当--> `10^{10}`: $$10^{10}$$
+`{x^y}^z`: $${x^y}^z$$
 
 ## 圆括号 () []
 
-需要输入括号时，使用斜杠前置，如`\(`, `\{`, `\[ `
-如果不使用前面的反斜杠，则不能同公式一同缩放，如果你写`(\frac{\sqrt x}{y^3})`,小括号将会显示的很小，将会显示成$ (\frac{\sqrt x}{y^3}) $
-如果使用`\left(` ... `\right )`，将会使括号的尺寸自动适应公式的大小
-`\left ( \frac {\sqrt x}{y^3}\right) `, 显示成$\left( \frac {\sqrt x}{y^3} \right)$
+需要输入括号时，使用斜杠前置，如`\(`, `\{`, `\[ `  
+如果不使用前面的反斜杠，则不能同公式一同缩放，如果你写`(\frac{\sqrt x}{y^3})`,小括号将会显示的很小，将会显示成$$ (\frac{\sqrt x}{y^3}) $$  
+如果使用`\left(` ... `\right )`，将会使括号的尺寸自动适应公式的大小  
+`\left ( \frac {\sqrt x}{y^3}\right) `, 显示成$$\left( \frac {\sqrt x}{y^3} \right)$$  
 其他的括号：
-`\vert ` : $\vert$
-`\angle ` : $\angle$
-`\langle `:$\langle$ and `rangle` : $\rangle$
-`\lceil ` and `rceil` : $\lceil$ and  $\rceil$
-and also `\lfloor ` and `rfloor` ; $\lfloor$ and $\rfloor$
-也有一些不可见的括号，用`.`表示
-`\left.\frac 1 2 \right \rbrace ` is $\left.\frac 1 2 \right \rbrace$
+`\vert ` : $$\vert$$
+`\angle ` : $$\angle$$
+`\langle `:$$\langle$$ and `rangle` : $$\rangle$$
+`\lceil ` and `rceil` : $$\lceil$$ and  $$\rceil$$
+and also `\lfloor ` and `rfloor` ; $$\lfloor$$ and $$\rfloor$$
+也有一些不可见的括号，用`.`表示  
+`\left.\frac 1 2 \right \rbrace ` is $$\left.\frac 1 2 \right \rbrace$$  
 
 ## 积分和微分
 
-`\sum ` and `\int`===
-例子
-`\sum_1^{n^2}` : $\sum_i^{n^2}$
-`\sum_{i=0}^\infty i^2` is $\sum_{i=0}^\infty i^2$
-similarly, `\prod ` : $\prod$, and `\int ` : $\int$,and bigcup -->  $\bigcup$
-also `\iint ` : $\iint$
+`\sum ` and `\int` ...  
+
+**例子**  
+`\sum_1^{n^2}` : $$\sum_i^{n^2}$$  
+`\sum_{i=0}^\infty i^2` is $$\sum_{i=0}^\infty i^2$$  
+similarly, `\prod ` : $$\prod$$, and `\int ` : $$\int$$, and bigcup :  $$\bigcup$$  
+also `\iint ` : $$\iint$$
 
 ## 分数
 
-`\frac ab` : displayed as $\frac a b$, and `\frac {a+1}{b+1}` : $\frac {a+1} {b+1}$
+`\frac ab` : displayed as $$\frac a b$$, and `\frac {a+1}{b+1}` : $$\frac {a+1} {b+1}$$
 numerator分子   denominator 分母
-如果分子和分母结构是复杂的，可以使用`\over `，可以把分子分母分开来写，${a+1} \over {b+1}$
+如果分子和分母结构是复杂的，可以使用`\over `，可以把分子分母分开来写，$${a+1} \over {b+1}$$
 
 ## 字体
 
 不常用，只列出一些命令
+```latex
 \mathbb    or     \Bbb
 \mathbf
 \mathtt
@@ -80,40 +85,43 @@ numerator分子   denominator 分母
 \mathcal
 \mathscr
 \mathfrac
+```
 
 ## 根号Radical signs
 
-使用`sqrt`，如`\sqrt ` ：$\sqrt{x^3}$
-`\sqrt[3]{\frac x y}` : $\sqrt[3]{\frac x y}$
+使用`sqrt`，如`\sqrt ` ：$$\sqrt{x^3}$$
+`\sqrt[3]{\frac x y}` : $$\sqrt[3]{\frac x y}$$
 
 ## 其它功能
 
-`\lim `, `\sin ` : $\lim and \sin x$
-例如`\lim_{x \to 0}` : $\lim_{x \to 0}$
+`\lim `, `\sin ` : $$\lim and \sin x$$
+例如`\lim_{x \to 0}` : $$\lim_{x \to 0}$$
 
 ## 很多的其他符号
 
 ## 空格
 
-要加空格，需要使用`\ `, 例如对于小空格ab ：$a\ b$
-大空格使用`quad` and `qquad` : $a \quad b \ and \ a \qquad b$
-如果在公式中插入普通文本，使用`\text ` \text{...}
+要加空格，需要使用`\ `, 例如对于小空格ab ：$$a\ b$$
+大空格使用`quad` and `qquad` : $$a \quad b \ and \ a \qquad b$$
+如果在公式中插入普通文本，使用`\text ` $$\text{...}$$
 
 ## 强调和区别标记
 
+```latex
 \hat and \widehat
 \bar and \overline
 \vec and \overrightarrow and \overleftrightarrow
 don't use in this format `\\`, should use as `\backslash`
+```
 
 # 矩阵
 
 ## 基本的矩阵写法
 
-`$$\begin{matrix}...\end{matrix}$$`将矩阵放在\begin{matrix}与\end{matrix}之间，每行矩阵以`\\`结尾，换行
+`$$\begin{matrix}...\end{matrix}$$`将矩阵放在`\begin{matrix}`与`\end{matrix}`之间，每行矩阵以`\\`结尾，换行
 使用`&`来分割矩阵元素(直接看源码，不写标注了)
 
-```MathJax
+```latex
 \begin{matrix}
 1 & x & x^2 \\
 1 & y & y^2 \\
@@ -143,13 +151,14 @@ $$
 \right]
 $$
 
-对于行内的矩阵，使用小的矩阵形式矩阵$ \bigl( \begin {smallmatrix}...\end{smallmatrix} \bigr) $在行内中显示
-显示一个觉得例子，在矩阵$\bigl( \begin{smallmatrix} a & b \\ c & d \\ \end{smallmatrix} \bigr)$中显示abcd
+对于行内的矩阵，使用小的矩阵形式矩阵$$ \bigl( \begin {smallmatrix}...\end{smallmatrix} \bigr) $$在行内中显示  
+显示一个觉得例子，在矩阵$$\bigl( \begin{smallmatrix} a & b \\ c & d \\ \end{smallmatrix} \bigr)$$中显示abcd  
 
 # 公式对齐
 
-有人想让一系列公式对齐，使用`\begi{align}...\end{align}`，每行必须使用`\\`来换行，并且在对齐的地方使用`&`(ampersand)
-```MathJax
+有人想让一系列公式对齐，使用`\begi{align}...\end{align}`，每行必须使用`\\`来换行，并且在对齐的地方使用`&`(ampersand)  
+
+```latex
 \begin{align}
 \sqrt{37} & = \sqrt { \frac {73^2-1} {12^2} } \\
 & = \sqrt { \frac{73^2}{12^2} \cdot \frac{73^2-1}{73^2} } \\
@@ -180,7 +189,7 @@ $$
 
 使用格式`\begin{cases}...\end{cases}`，每个cases以`\\`结束，并且使用`&`来对齐(\text 可以在公示中插入普通文本plain text)
 
-```MathJax
+```latex
 f(n) = 
 \begin{cases}
 n/2, & \text{if $n$ is even} \\
@@ -196,7 +205,7 @@ n/2, & \text{if $n$ is even} \\
 \end{cases}
 $$
 
-```MathJax
+```latex
 \left .
 \begin{array}{l}
 \text {if $n$ is even:} &n/2 \\
@@ -216,8 +225,9 @@ $$
 = f(n)
 $$
 
-两个公式之间有大的空间，我们可以使用`\\[2ex]` 代替`\\`
-```MathJax
+两个公式之间有大的空间，我们可以使用`\\[2ex]` 代替`\\`  
+
+```latex
 $$
 f(n) = 
 \begin{cases}
@@ -226,6 +236,7 @@ f(n) =
 \end{cases}
 $$
 ```
+
 $$
 f(n) = 
 \begin{cases}
@@ -236,8 +247,9 @@ $$
 
 # 阵列，数组
 
-在MathJax中使用表格或数组更易读，Arrays和Tables可以使用`array`来创建，在`\begin{array} `之后列出每列，使用`c`可以居中排列，`l`是左对齐而`r`是右对齐，`|`表示竖直线，像矩阵类似的格式，使用`&`来划分单元，每行最后使用`\\`，添加水平线使用`\hline`
-```MathJax
+在MathJax中使用表格或数组更易读，Arrays和Tables可以使用`array`来创建，在`\begin{array} `之后列出每列，使用`c`可以居中排列，`l`是左对齐而`r`是右对齐，`|`表示竖直线，像矩阵类似的格式，使用`&`来划分单元，每行最后使用`\\`，添加水平线使用`\hline`  
+
+```latex
 \begin{array}{l|lcr}
 n & \text{left} & \text{center} & \text{right} \\
 1 & 0.24 & 1 & 125 \\
@@ -273,7 +285,7 @@ $$
 
 使用`\begin{array}.\end{array}` and `\left\{...\right.`
 
-```MathJax
+```latex
 \left \{
 \begin{array}{c}
 a_1 x + b_1 y + c_1 z = d_1 \\
@@ -295,7 +307,7 @@ $$
 
 我们可以使用`\begin{cases}...\end{cases}`
 
-```MathJax
+```latex
 \begin{cases}
 a_1 x + b_1 y + c_1 z &= d_1 + e_1 \\
 a_2 x + b_2 y &= d_2 \\
@@ -313,7 +325,7 @@ $$
 
 使用`\begin{aligned}...\end{aigned}`和`\left \{...\right .`来对齐公式
 
-```MathJax
+```latex
 \left \{
 \begin{aligned}
 a_1 x + b_1 y + c_1 z &= d_1 + e_1 \\
@@ -333,7 +345,7 @@ a_3 x + b_3 y + c_3 z &= d_3 \\
 \right .
 $$
 
-```MathJax
+```latex
 \begin{cases}
 a_1 x + b_1 y + c_1 z = \frac{p_1}{q_1} \\
 a_2 x + b_2 y + c_2 z = \frac{p_2}{q_2} \\
@@ -351,10 +363,11 @@ $$
 
 # 连分数
 
-使用`\cfrac `而不能使用`\frac ` or `\over` 
+使用`\cfrac `而不能使用`\frac ` or `\over`   
 
 # 其它装饰
 
+```latex
 \overline
 \underline
 \widetilde
@@ -363,12 +376,14 @@ $$
 \underleftarrow
 \underrightarrow
 ...
+```
+
 
 # tags（标签）和参考
 
-对于一些长的计算公式，使用等式标签`\tag{yourtag} `，如果你想参考哪个标签，添加`\label{somelabel} ` 在`tag`标签的正后方，没必要你的标签和label一样
+对于一些长的计算公式，使用等式标签`\tag{yourtag} `，如果你想参考哪个标签，添加`\label{somelabel} ` 在`tag`标签的正后方，没必要你的标签和label一样  
 
-```MathJax
+```latex
 a := x^2 - y^3 \tag{*} \label{*}
 
 a+y^3 \stackrel{\eqref{*}} = x^2
@@ -378,7 +393,7 @@ $$
 a := x^2 - y^3 \tag{*} \label{*}
 $$
 
-为了能够参考一个公式，使用`\eqref{somelabel}`
+为了能够参考一个公式，使用`\eqref{somelabel}`  
 
 $$
 a+y^3 \stackrel{\eqref{*}} = x^2
@@ -386,9 +401,9 @@ $$
 
 # 大括号
 
-使用`\left `和`\right `后面跟括号，可以缩放括号, curly braces大括号
+使用`\left `和`\right `后面跟括号，可以缩放括号, curly braces大括号  
 
-```MathJax
+```latex
 f\left(
 \left [
 \frac{
@@ -419,9 +434,9 @@ f\left(
 $$
 
 注意：大括号需要使用`\{ \ \}`
-如果你使用一个大括号`\left `并且匹配右括号`\right `在不同的行，使用`\right. ` and `\left. `来隐藏括号，因此
+如果你使用一个大括号`\left `并且匹配右括号`\right `在不同的行，使用`\right. ` and `\left. `来隐藏括号，因此  
 
-```
+```latex
 \left\langle
 q
 \middle\|
@@ -443,20 +458,20 @@ $$
 
 # 无限
 
-limits and lim
+limits and lim  
 
-```
+```latex
 $ \lim \limits_{x \to 1} \frac{x^2 - 1}{x-1} $
 ```
 
-$ \lim \limits_{x \to 1} \frac{x^2 - 1}{x-1} $
+$$ \lim \limits_{x \to 1} \frac{x^2 - 1}{x-1} $$
 
 # 绝对值与泛数
 
 一些值得绝对值可以表示(denoted)为`\lvert x \rvert `，更通常的，
 `\left \lvert ... \right\rvert`
 
-```
+```latex
 |x|, ||v||
 \quad \longrightarrow \quad \lvert x \rvert, \lVert v \rVert
 ```
@@ -468,15 +483,15 @@ $$
 
 # 左右箭头
 
-```
+```latex
 $\Rightarrow$, $\Leftarrow$ and $\Leftrightarrow$
 ```
 
-$\Rightarrow$, $\Leftarrow$ and $\Leftrightarrow$
+$$\Rightarrow$$, $$\Leftarrow$$ and $$\Leftrightarrow$$
 
 # 对于每行的等式给出原因
 
-```
+```latex
 \begin{align}
 v + w &= 0 && \text{Given} \tag 1 \\
 -w &= -w + 0 && \text{additive identity} \tag 2 \\
@@ -494,7 +509,7 @@ $$
 
 # 高亮等式
 
-```
+```latex
 \bbox[yellow]
 {
 e^x = \lim_{n \to \infty} \left( 1+\frac{x}{n} \right)^n \qquad(1)
@@ -512,7 +527,7 @@ add border, use `\bbox[Spx, border:2px solid red]`
 
 # long division
 
-```
+```latex
 \require{enclose}
 \begin{array}{r}
 13 \\[-3pt]
@@ -537,24 +552,24 @@ $$
 # 角度符号
 
 角度符号不是`^\circ `，尽管许多人这么用，但是实际效果并不是按照规则的
-例如错误的显示$ 90^\circ$
+例如错误的显示$$90^\circ$$
 
 # 垂直空间
 
-```
+```latex
 $ \sqrt{\mathstrut a} - \sqrt{\mathstrut b} $
 $ \sqrt{\vphantom{b} a} - \sqrt{b} $
 ```
 
-$ \sqrt{\mathstrut a} - \sqrt{\mathstrut b} $
-$ \sqrt{\vphantom{b} a} - \sqrt{b} $
+$$ \sqrt{\mathstrut a} - \sqrt{\mathstrut b} $$
+$$ \sqrt{\vphantom{b} a} - \sqrt{b} $$
 
 # 显示样式和文本样式
 
 许多像分数fraction，和sums，极限limits和积分显示在行内公式时，你可以转换样式使用`\displaystyle ` and `\textstyle ` 以便能够实现理想的显示
 display显示为立体形式，textstyle显示为平面形式
 
-```
+```latex
 \sum_{n=1}^\infty \frac{1}{n^2} \to
 \textstyle \sum_{n=1}^\infty \frac{1}{n^2} \to
 \displaystyle \sum_{n=1}^\infty \frac{1}{n^2}
@@ -566,13 +581,13 @@ $$
 \displaystyle \sum_{n=1}^\infty \frac{1}{n^2}
 $$
 
-```
-compare $\displaystyle \lim_{t \to 0} \int_t^1 f(t) \, dt $
+```latex
+compare $ \displaystyle \lim_{t \to 0} \int_t^1 f(t) \, dt $
 versus $ \textstyle  \lim_{t \to 0} \int_t^1 f(t) \, dt $
 ```
 
-compare $\displaystyle \lim_{t \to 0} \int_t^1 f(t) \, dt $
-versus $ \textstyle  \lim_{t \to 0} \int_t^1 f(t) \, dt $
+compare $$\displaystyle \lim_{t \to 0} \int_t^1 f(t) \, dt $$
+versus $$ \textstyle  \lim_{t \to 0} \int_t^1 f(t) \, dt $$
 
 
 

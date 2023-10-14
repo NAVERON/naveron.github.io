@@ -777,7 +777,7 @@ set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx 
 
 
-" STATUS LINE ------------------------------------------------------------ {{{
+" STATUS LINE ------------------------------------------------------------
 " Clear status line when vimrc is reloaded.
 set statusline=
 " Status line left side.
