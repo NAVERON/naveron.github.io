@@ -95,7 +95,7 @@ e^{-\vec{\beta}\cdot\vec{m}(\mu)}
 $$
 
 next test $$ \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$  
-与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan(\frac{\sqrt{Ax^2+Az^2}}{Ay}) $$
+与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan(\frac{ \sqrt{Ax^2+Az^2}}{Ay}) $$
 
 ![3维示意图](../../assert/images/tools/sensor_2.png)  
 
