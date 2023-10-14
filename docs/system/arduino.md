@@ -1,6 +1,6 @@
 ---
 title: arduino
-layout: post
+layout: mathjax
 parent: system
 ---
 
