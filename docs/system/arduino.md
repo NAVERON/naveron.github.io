@@ -90,8 +90,8 @@ void loop() 连续执行函数内的语句
 与上面类似的计算过程，可以得出倾斜角度公式  
 
 $$
-\alpha = \arctan(\frac {\sqrt {Ax^2+Az^2}} {Ay})
-$$  
+\alpha = \arctan(\frac {\sqrt { Ax^2+Az^2 } } {Ay})
+$$
 
 ![3维示意图](../../assert/images/tools/sensor_2.png)  
 
