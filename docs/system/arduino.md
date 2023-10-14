@@ -1,8 +1,7 @@
 ---
 title: arduino
-layout: post
 parent: system
-math: mathjax
+layout: mathjax
 ---
 
 # Arduino C语法
@@ -51,14 +50,14 @@ void loop() 连续执行函数内的语句
 - delayMicroseconds(us) 延时函数，单位us
 
 **数学函数**
-- min(x, y) 求最小值
-- max(x, y) 求最大值
-- abs(x) 计算绝对值
-- constrain(x, a, b) 约束函数，下限a， 上限b， x必须在ab之间才能返回
-- map(value, fromLow, fromHigh, toLow, toHigh) 约束函数，value必须在范围值之间
-- pow(base, exponent) 开方函数，base的exponent次方
-- sq(x) 平方
-- sqrt(x) 开平方
+- `min(x, y)` 求最小值
+- `max(x, y)` 求最大值
+- `abs(x)`` 计算绝对值
+- `constrain(x, a, b)` 约束函数，下限a， 上限b， x必须在ab之间才能返回
+- `map(value, fromLow, fromHigh, toLow, toHigh)` 约束函数，value必须在范围值之间
+- `pow(base, exponent)` 开方函数，base的exponent次方
+- `sq(x)` 平方
+- `sqrt(x)` 开平方
 
 # ADXL335
 
@@ -82,7 +81,7 @@ void loop() 连续执行函数内的语句
 
 ![2示意图](../pics/tools/sensor_1.png)  
 
-如图所示，有$$Ax = g \sin \alpha, Ay = g \cos \alpha, then \frac{Ax}{Ay} = \tan \alpha$$，即$$\alpha = \arctan(\frac{Ax}{Ay})$$  
+如图所示，有$$ Ax = g \sin \alpha, Ay = g \cos \alpha, then \frac{Ax}{Ay} = \tan \alpha $$，即$$ \alpha = \arctan(\frac{Ax}{Ay}) $$  
 这样，就可以根据在x、y轴上的加速度求取倾斜角度（注意：这是静止状态，运动过程需要提高采样频率）
 
 **二维平面具有局限性，所以使用3维的加速度计算**  

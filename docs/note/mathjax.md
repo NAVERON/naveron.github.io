@@ -1,8 +1,7 @@
 ---
 title: mathjax
-layout: post
 parent: note
-math: mathjax
+layout: mathjax
 ---
 
 # MathJax basic tutorial and quick reference
