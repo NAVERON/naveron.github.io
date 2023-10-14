@@ -87,15 +87,7 @@ void loop() 连续执行函数内的语句
 
 **二维平面具有局限性，所以使用3维的加速度计算**  
 
-$$
-\langle \vec{m} \rangle =
-\frac{1}{Z(\vec{\beta})}\vec{m}(\mu)
-\sum_{\mu\in\mathcal{G}}
-e^{-\vec{\beta}\cdot\vec{m}(\mu)}
-$$
-
-next test $$ \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$  
-与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan(\frac{ \sqrt{Ax^2+Az^2}}{Ay}) $$
+与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan(\frac{+ \sqrt{Ax^2+Az^2}}{Ay}) $$
 
 ![3维示意图](../../assert/images/tools/sensor_2.png)  
 
