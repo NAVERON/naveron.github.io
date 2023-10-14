@@ -80,12 +80,15 @@ git checkout -b xxx origin/main && git pull or git push
 #### push参数
 
 一般我们使用`git push` 命令会把当前的本地分支推送到track远程分支, 这里可以指定push参数  
+
 ```shell
 git push <remote> <place>
 git push origin main
 # 表示推送 `main`分支HEAD 到`origin` 中的`main`分支上 
 ```
+
 更甚至, 想把本地的某一个分支推送到远程其他分支上  
+
 ```shell
 git push origin <source>:<destination> 
 git push origin feature:main
@@ -119,7 +122,7 @@ pull 相当于fetch和merge的合体
 
 1. 首先更改某一个文件的内容  
 2. `git status`可以表明当前仓库的状态：被修改了什么，哪些没有提交  
-  需要提交时，首先需要**add**命令：  
+  需要提交时，首先需要**add**命令：
 3. `git add <filename>`或者`git add .`提交所有文件  
   一次可以提交多个文件，以空格分开  
 4. 最后是提交到仓库中，使用`git commit -m "comment..."`命令  
@@ -130,8 +133,7 @@ _需要比较文件修改了什么内容，使用`git diff <filename>`命令_
 #### 版本回退问题
 
 HEAD指向当前版本
-`git log`查看提交记录，`git reflog`查看命令历史，以便于确定回到哪个版本  
-理解**暂缓区**的概念  
+`git log`查看提交记录，`git reflog`查看命令历史，以便于确定回到哪个版本, 理解**暂缓区**的概念  
 
 #### 分支学习
 

@@ -65,6 +65,7 @@ in-mind
 
 使用`git lfs`造成多端同步的问题, 尤其Windows对LFS支持不好, 所以弃用LFS工具  
 将之前的`ERON`, `CONFIG`仓库合并, 去除多余的大文件部分, 保留主要成分, 为防止意外, 备份项目至GITEE  
+更新 : 现将`GITHUB`的`ERON`仓库封存, 直接采用个人网站的形式保存文档, 方便发布和查看  
 
 - [CONFIG](https://gitee.com/naveron/CONFIG)  
 - [ERON](https://gitee.com/naveron/ERON)  

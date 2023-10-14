@@ -9,8 +9,6 @@ layout: mathjax
 ## Latex Fomular
 [Latex公式编辑](https://en.wikipedia.org/wiki/Help:Displaying_a_formula)  
 
-[TOC]
-
 # 公式基础
 
 ## 行内公式和行间公式
@@ -62,6 +60,7 @@ and also `\lfloor ` and `rfloor` ; $$\lfloor$$ and $$\rfloor$$
 `\sum ` and `\int` ...  
 
 **例子**  
+
 `\sum_1^{n^2}` : $$\sum_i^{n^2}$$  
 `\sum_{i=0}^\infty i^2` is $$\sum_{i=0}^\infty i^2$$  
 similarly, `\prod ` : $$\prod$$, and `\int ` : $$\int$$, and bigcup :  $$\bigcup$$  
@@ -75,7 +74,8 @@ numerator分子   denominator 分母
 
 ## 字体
 
-不常用，只列出一些命令
+不常用，只列出一些命令  
+
 ```latex
 \mathbb    or     \Bbb
 \mathbf
@@ -118,8 +118,8 @@ don't use in this format `\\`, should use as `\backslash`
 
 ## 基本的矩阵写法
 
-`$$\begin{matrix}...\end{matrix}$$`将矩阵放在`\begin{matrix}`与`\end{matrix}`之间，每行矩阵以`\\`结尾，换行
-使用`&`来分割矩阵元素(直接看源码，不写标注了)
+`$$\begin{matrix}...\end{matrix}$$`将矩阵放在`\begin{matrix}`与`\end{matrix}`之间，每行矩阵以`\\`结尾，换行  
+使用`&`来分割矩阵元素(直接看源码，不写标注了)  
 
 ```latex
 \begin{matrix}
@@ -137,10 +137,9 @@ $$
 \end{matrix}
 $$
 
-为矩阵添加框架，不是使用`\left \right `，使用矩阵特有的
-`pmatrix` `bmatrix` `Bmatrix` `vmatrix` `Vmatrix`
-使用`\cdots `...`ddots`, `vdots`，在矩阵中表示省略的点
-注：array后边的`cc|c`表示显示的格式
+为矩阵添加框架，不是使用`\left \right `, 使用矩阵特有的 `pmatrix` `bmatrix` `Bmatrix` `vmatrix` `Vmatrix`, 使用`\cdots `...`ddots`, `vdots`，在矩阵中表示省略的点  
+
+> 注：array后边的`cc|c`表示显示的格式
 
 $$
 \left[
@@ -269,11 +268,9 @@ $$
 
 # 间距问题
 
-![公式样式美观度分析图片](../pics/tools/Ashampoo_Snap_2017.07.04_16h16m08s_001_.png)  
+![公式样式美观度分析图片](../../assert/images/tools/Ashampoo_Snap_2017.07.04_16h16m08s_001_.png)  
 
-图片中显示了一些由于间距造成的美观问题
-在使用`|`时应当替换成`\mid`，可以使得间距变大
-不要使用`\int \int ` or `\int \int \int `, 应当替换成`\iint ` or `\iiint`  
+图片中显示了一些由于间距造成的美观问题, 在使用`|`时应当替换成`\mid`，可以使得间距变大, 不要使用`\int \int ` or `\int \int \int `, 应当替换成`\iint ` or `\iiint`  
 
 # 颜色
 
@@ -305,7 +302,7 @@ a_3 x + b_3 y + c_3 z = d_3 \\
 \right .
 $$
 
-我们可以使用`\begin{cases}...\end{cases}`
+我们可以使用`\begin{cases}...\end{cases}`  
 
 ```latex
 \begin{cases}
@@ -433,7 +430,8 @@ f\left(
 \right)
 $$
 
-注意：大括号需要使用`\{ \ \}`
+> 注意：大括号需要使用`\{ \ \}`
+
 如果你使用一个大括号`\left `并且匹配右括号`\right `在不同的行，使用`\right. ` and `\left. `来隐藏括号，因此  
 
 ```latex

@@ -6,7 +6,7 @@ parent: system
 
 # 学习MakeFile
 
-## make文件规则：
+## make文件规则
 
 1. 如果工程没有被编译过，则所有C文件都需要编译和链接  
 2. 如果工程某个C文件被修改，那么只编译被修改的文件，并链接目标程序  
@@ -49,7 +49,8 @@ makefile包含了5个东西：显示规则，隐晦规则，变量定义，文�
 一般命名为Makefile或者makefile
 
 ## 引用其他makefile
-include<filename>
+
+`include<filename>`
 
 ## 执行步骤
 
@@ -61,7 +62,7 @@ include<filename>
 6. 根据依赖关系，决定哪些目标要重新生成  
 7. 执行生成命令  
 
-command如果不与target一行，需要以[Tag]开头，如果在一行，以`;`分隔，`\`作为换行符  
+command如果不与target一行，需要以`[Tag]`开头，如果在一行，以`;`分隔，`\`作为换行符  
 
 
 
