@@ -47,9 +47,9 @@ http PUT pie.dev/put \
 - `--stream` 让请求输出类似于`tail -f`命令， 向后传递输出流, 可以用在长连接请求上, 持续输出内容, 并做处理
 - `--session` http请求无状态, httpie提供了session功能, 相当于后端的session功能; `--session-read-only` 只读session
 - `--check-status` 检查status返回
-```shell
-#!/bin/bash
 
+```shell
+#! /bin/bash
 if http --check-status --ignore-stdin --timeout=2.5 HEAD pie.dev/get &> /dev/null; then
     echo 'OK!'
 else

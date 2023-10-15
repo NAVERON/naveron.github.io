@@ -23,7 +23,7 @@ mermaid
 ---
 
 %% standard normal flow chart graph, also flowchart
-graph TB
+flowchart TB
     init(["init state"]) 
     calcute[/"calcute number"/]
     running["simple running"]

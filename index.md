@@ -17,7 +17,6 @@ layout: home
 ### 关于我自己 
 
 - [ ] 我的简介[NAVERON](https://github.com/NAVERON/NAVERON)  
-- [ ] 随笔资料心得[ERON](https://github.com/NAVERON/ERON)  
 - [ ] 开发环境重建脚本[CONFIG](https://github.com/NAVERON/CONFIG)  
 - [ ] ......
 

@@ -1,5 +1,5 @@
 ---
-title: my design
+title: family
 layout: post
 parent: daily
 ---
@@ -23,15 +23,15 @@ parent: daily
 
 #### **信件原文（其中多数摘抄，但是不乏真情实感，感谢母亲的养育之恩）**  
 
-![第1页](./letters/IMG_0615.jpg)
-![第2页](./letters/IMG_0616.jpg)
-![第3页](./letters/IMG_0617.jpg)
-![第4页](./letters/IMG_0618.jpg)
-![第5页](./letters/IMG_0619.jpg)
-![第6页](./letters/IMG_0620.jpg)
-![第7页](./letters/IMG_0621.jpg)
-![第8页](./letters/IMG_0622.jpg)
-![第9页](./letters/IMG_0623.jpg)
+![第1页](../../assert/images/letters/IMG_0615.jpg)
+![第2页](../../assert/images/letters/IMG_0616.jpg)
+![第3页](../../assert/images/letters/IMG_0617.jpg)
+![第4页](../../assert/images/letters/IMG_0618.jpg)
+![第5页](../../assert/images/letters/IMG_0619.jpg)
+![第6页](../../assert/images/letters/IMG_0620.jpg)
+![第7页](../../assert/images/letters/IMG_0621.jpg)
+![第8页](../../assert/images/letters/IMG_0622.jpg)
+![第9页](../../assert/images/letters/IMG_0623.jpg)
 
 
 

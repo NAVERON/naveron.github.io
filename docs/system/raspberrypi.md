@@ -32,7 +32,6 @@ raspberry pi
 安装网络管理 [network-manager](https://ubuntu.com/core/docs/networkmanager)  
 安装树莓派配置管理 [raspi-config] `sudo apt install raspi-config`  
 
-
 ## 遗留问题  
 
 如果外部环境变化, 如`wifi`网络无法连接， 如何直接使用网线连接笔记本直接登录控制 ?  
@@ -71,7 +70,7 @@ $ sudo apt-get update
 $ sudo apt-get install python-rpi.gpio python3-rpi.gpio
 ```
 
-To install the latest development version from the project source code library:  
+To install the latest development version from the project source code library :   
 
 ```shell
 $ sudo apt-get install python-dev python3-dev
@@ -108,13 +107,13 @@ It is recommended that you install RPi.GPIO using the pip utility as superuser (
 
 显示器朝向自己，电池插头**没有箭头**的朝向自己，显示电量
 购买BB响截图
-![电量检测](../pics/tools/电量检测.png)  
+![电量检测](../../assert/images/tools/电量检测.png)  
 
 ## 电池电压
-![电池电压，避免长时间不用，应当每月放电充电](../pics/tools/电池使用.png)  
+![电池电压，避免长时间不用，应当每月放电充电](../../assert/images/tools/电池使用.png)  
 
 ## 充电器使用
-![充电器](obsidian://open?vault=naveron.github.io&file=assert%2Fimages%2Ftools%2F%E5%B9%B3%E8%A1%A1%E5%85%85%E7%94%B5%E5%99%A8.png)  
+![充电器](../../assert/images/tools/电池使用.png)  
 
 
 
