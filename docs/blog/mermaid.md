@@ -19,11 +19,11 @@ mermaid
 
 ```mermaid
 ---
-    title : simple graph
+    title: simple graph
 ---
 
-%% standard normal flow chart graph, also flowchart
-flowchart TB
+graph TB
+    %% standard normal flow chart graph, also flowchart
     init(["init state"]) 
     calcute[/"calcute number"/]
     running["simple running"]

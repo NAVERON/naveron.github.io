@@ -22,9 +22,6 @@ mermaid:
   version: "10.4.0"
 
 # math: mathjax
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
 
 # For copy button on code blocks
 enable_copy_code_button: true
@@ -68,8 +65,7 @@ callouts:
     color: red
 
 plugins:
-  - jekyll-seo-tag
-  - jekyll-include-cache
+  - jekyll-default-layout
 
 
 

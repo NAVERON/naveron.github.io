@@ -1,5 +1,5 @@
 ---
-title: my design
+title: design
 layout: post
 parent: daily
 ---
