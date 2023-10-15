@@ -87,7 +87,7 @@ void loop() 连续执行函数内的语句
 
 **二维平面具有局限性，所以使用3维的加速度计算**  
 
-与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan \frac {\sqrt{{A_x}^2+{A_z}^2}}{A_y} $$
+与上面类似的计算过程，可以得出倾斜角度公式  $$ \alpha = \arctan \frac {\sqrt{ A_x^2 + A_z^2 }}{A_y} $$
 
 > ~~因为双`{{`问题导致语法编译错误, 暂时使用原始公式表达式~~  
 
@@ -97,8 +97,8 @@ void loop() 连续执行函数内的语句
 
 $$
 \begin {cases}
-\alpha = \arctan(\frac{\sqrt{{A_x}^2 + {A_y}^2}}{A_y})  \\
-\sqrt{{A_x}^2 + {A_z}^2 + {A_y}^2} = 1g
+\alpha = \arctan(\frac{\sqrt { A_x^2 + A_y^2 }}{A_y})  \\
+\sqrt{ A_x^2 + A_z^2 + A_y^2 } = 1g
 \end{cases}
 $$
 
