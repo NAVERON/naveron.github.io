@@ -4,6 +4,15 @@ layout: post
 parent: system
 ---
 
+C&C++
+{: .label .label-purple}
+
+make
+{: .label}
+
+compile
+{: .label .label-green}
+
 # 学习MakeFile
 
 ## make文件规则

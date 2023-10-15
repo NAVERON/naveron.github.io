@@ -3,6 +3,11 @@ title: mathjax
 parent: note
 layout: mathjax
 ---
+math
+{:. label .label-green}
+
+mathjax
+{: .label}
 
 <details open markdown="block">
   <summary>

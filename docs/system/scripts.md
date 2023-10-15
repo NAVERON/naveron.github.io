@@ -4,6 +4,12 @@ layout: post
 parent: system
 ---
 
+script
+{: .label}
+
+tools
+{: .label .label-purple}
+
 <details open markdown="block">
   <summary>
     Table of contents

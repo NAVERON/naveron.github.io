@@ -4,6 +4,9 @@ layout: post
 parent: daily
 ---
 
+design  
+{: .label}
+
 # 我的设计之旅  
 
 可能从一开始, 我就对这个世界充满了好奇, 不断探索, 不断发掘和感受  

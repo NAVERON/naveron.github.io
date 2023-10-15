@@ -7,6 +7,9 @@ parent: system
 raspberry pi  
 {: .label}
 
+hardware
+{: .label}
+
 # 树莓派系统的安装和设置 
 
 基本参考资料

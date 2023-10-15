@@ -4,6 +4,12 @@ parent: system
 layout: mathjax
 ---
 
+arduino
+{: .label}
+
+hardware
+{: .label .label-yellow}
+
 # Arduino C语法
 
 [**详细可以参考已有文件**](../../assert/files/arduino语言说明.pdf)  

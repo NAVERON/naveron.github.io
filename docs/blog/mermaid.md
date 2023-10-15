@@ -332,7 +332,7 @@ pie
     "chicken" : 56
 ```
 
-`Obsidian`暂时不支持mermaid最新绘图类型, IDEA的插件是支持的  
+~~`Obsidian`暂时不支持mermaid最新绘图类型, IDEA的插件是支持的~~  
 
 ```mermaid
 quadrantChart

@@ -64,8 +64,8 @@ callouts:
     title: Warning
     color: red
 
-plugins:
-  - jekyll-default-layout
+# plugins:
+#  - xxx
 
 
 

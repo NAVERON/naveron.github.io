@@ -4,6 +4,12 @@ layout: post
 parent: daily
 ---
 
+family
+{: .label .label-purple}
+
+mom
+{: .label .label-red}
+
 # 妈妈给我的信 
 
 亲爱的儿子，你是妈最爱的儿子。  
