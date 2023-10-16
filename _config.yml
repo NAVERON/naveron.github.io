@@ -12,11 +12,11 @@ nav_external_links:
   - title: evs on github
     url: "https://github.com/NAVERON/naveron.github.io"
     hide_icon: false
-    opens_in_new_tab: true
+    opens_in_new_tab: false
   - title: evs on bilibili
     url: "https://space.bilibili.com/89060131"
     hilde_icon: false
-    opens_in_new_tab: true
+    opens_in_new_tab: false
 
 # set back to top
 back_to_top: true
@@ -33,10 +33,6 @@ mermaid:
 
 # For copy button on code blocks
 enable_copy_code_button: true
-kramdown:
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
 
 # callout configs
 callouts:
