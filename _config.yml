@@ -5,7 +5,7 @@ theme: just-the-docs
 url: https://naveron.github.io/
 
 aux_links:
-  NAVERON GITHUB: https://github.com/NAVERON
+  ERON GITHUB: https://github.com/NAVERON
 aux_links_new_tab: true
 
 nav_external_links:
@@ -13,6 +13,14 @@ nav_external_links:
     url: "https://github.com/NAVERON/naveron.github.io"
     hide_icon: false
     opens_in_new_tab: true
+  - title: evs on bilibili
+    url: "https://space.bilibili.com/89060131"
+    hilde_icon: false
+    opens_in_new_tab: true
+
+# set back to top
+back_to_top: true
+back_to_top_text: "Back To Top"
 
 color_scheme: dark
 
@@ -25,6 +33,10 @@ mermaid:
 
 # For copy button on code blocks
 enable_copy_code_button: true
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 # callout configs
 callouts:
@@ -63,6 +75,33 @@ callouts:
   warning:
     title: Warning
     color: red
+
+exclude:
+ # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+ # specific to the theme website:
+   - bin/
+   - lib/
+   - "*.gemspec"
+   - "*.gem"
+   - LICENSE.txt
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - README.md
+   - CODE_OF_CONDUCT.md
+   - docker-compose.yml
+   - Dockerfile
+
 
 # plugins:
 #  - xxx
