@@ -16,9 +16,7 @@ layout: home
 
 ### 关于我自己 
 
-- [ ] 我的简介[NAVERON](https://github.com/NAVERON/NAVERON)  
-- [ ] 开发环境重建脚本[CONFIG](https://github.com/NAVERON/CONFIG)  
-- [ ] ......
+[About Me](docs/summary.md)  
 
 ### 主要项目 
 

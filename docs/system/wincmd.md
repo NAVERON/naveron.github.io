@@ -4,6 +4,12 @@ layout: post
 parent: system
 ---
 
+windows
+{: .label}
+
+script
+{: .label}
+
 # Windows Command Line -- Powershell  
 
 > Ref : [Windows Commands](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)  

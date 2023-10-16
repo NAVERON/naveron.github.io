@@ -1,4 +1,4 @@
 {
-    theme: "neutral"
+    theme: "forest"
 }
 

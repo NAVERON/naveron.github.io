@@ -1,8 +1,11 @@
 ---
-title: my design
+title: design
 layout: post
 parent: daily
 ---
+
+design  
+{: .label}
 
 # 我的设计之旅  
 
