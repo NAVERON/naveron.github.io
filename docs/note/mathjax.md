@@ -3,8 +3,9 @@ title: mathjax
 parent: note
 layout: mathjax
 ---
+
 math
-{:. label .label-green}
+{: .label .label-green}
 
 mathjax
 {: .label}

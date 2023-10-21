@@ -22,7 +22,7 @@ mermaid
     title: simple graph
 ---
 
-graph TB
+flowchart TB
     %% standard normal flow chart graph, also flowchart
     init(["init state"]) 
     calcute[/"calcute number"/]

@@ -146,5 +146,75 @@ HEAD指向当前版本
 
 ## git mermaid 
 
+一般的开发流程/过程表示  
+
+```mermaid
+---
+title: 开发团队使用git协作开发示意图
+---
+
+gitGraph
+    commit id: "init repo"
+    branch preview
+    checkout preview
+    commit id: "pre build branch"
+    
+    branch dev1
+    branch dev2
+    
+    %% 开发1拉取分支开发
+    checkout dev1
+    commit id: "init"
+    commit id: "complete"
+    
+    %% 开发2拉取分支开发
+    checkout dev2
+    commit id: "func 2"
+    commit id: "feature 2"
+    commit id: "finish"
+
+    checkout preview
+    merge dev1
+    commit id: "deploy 1" tag: "v0.0.1"
+    merge dev2
+    commit id: "deploy 2" tag: "v0.0.2"
+
+    branch bugfix1
+    checkout bugfix1
+    commit id: "bugfix sth ..."
+    commit id: "bug fixup, test"
+
+    checkout preview
+    merge bugfix1
+    commit id: "for test"
+
+    %% branch 后直接跟commit相当于checkout
+    branch bugfix2
+    checkout bugfix2
+    commit
+    commit
+    commit
+
+    checkout preview
+    merge bugfix2
+    commit id: "rebuild project" tag: "v0.0.3"
+
+    %% 默认分支 main, 一个大版本完成后, 整体合并到main分支准备发布
+    checkout main
+    merge preview
+    commit id: "build big version" tag: "v0.1.0"
+
+    %% 继续preview分支拆分开发分支继续开发
+    checkout preview
+
+    branch dev3
+    checkout dev3
+    commit
+    commit
+    checkout preview
+    merge dev3
+    checkout main
+    merge preview
+```
 
 
