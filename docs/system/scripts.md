@@ -901,7 +901,7 @@ if __name__ == "__main__" :
     parser.add_argument("-fn", "--sender_name", dest="arg_from_name", help="set sender user name", default="wangyulong") 
     parser.add_argument("-fa", "--from_mail_address", dest="arg_from_mail_addr", help="set sender mail address, must and just one", required=True) 
     parser.add_argument("-fp", "--from_mail_password", dest="arg_from_mail_pwd", help="set sender mail password", required=True) 
-    parser.add_argument("-sn", "--mail_server", dest="arg_mail_server", help="set mail service server name", default="mail.xiaomi.com") 
+    parser.add_argument("-sn", "--mail_server", dest="arg_mail_server", help="set mail service server name", default="mail.xxx.com") 
     parser.add_argument("-sp", "--mail_server_port", dest="arg_mail_server_port", type=int, help="set mail service server port", default=25) 
     parser.add_argument("-rn", "--reciver_name", dest="arg_to_name", help="set reciver user name", default="wangyulong") 
     parser.add_argument("-ta", "--to_mail_address", dest="arg_to_mail_addr", help="set reciver mail address, can separated by comma", required=True)

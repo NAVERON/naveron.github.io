@@ -8,22 +8,21 @@ layout: home
 {: .important-title }  
 > 一个属于自己的天地 : **玉龙视效工作室**  
 > 
-> [ERON VISUAL STUDIO (**EVS**)](https://github.com/NAVERON){: .btn .btn-green }  
+> [ERON VISUAL STUDIO (**EVS**)](https://github.com/NAVERON){: .btn .btn-green}  
 
 ## 关于 
 
 才疏学浅, 贻笑大方
 
-### 关于我自己 
+### 我自己  
 
-[About Me](docs/summary.md)  
+[About Me](docs/summary)  
 
 ### 主要项目 
 
 - [ShipSimulation](https://github.com/NAVERON/ShipSimulation)  
 - [ArbitraryCoding](https://github.com/NAVERON/ArbitraryCoding)  
 - [SpecializedExercises](https://github.com/NAVERON/SpecializedExercises)  
-- ......
 
 ## 开始 
 
@@ -86,6 +85,11 @@ grand_parent: Layout  # 上上级路径
 
 **mermaid绘图工具的使用**  : [Mermaid Start](https://mermaid.js.org/intro/)  
 
+### 数学公式
+
+**Latex** : [Latex](https://www.latex-project.org/)  
+**mathjax Web数学公式渲染引擎** : [mathjax](https://www.mathjax.org/)  
+
 ### 搜索整理
 
 因为使用中文无法提供搜索, 所以使用分类标签实现每个文档的类别标记, 方便查找  
@@ -102,4 +106,8 @@ others colors
 .label-green .label-purple .label-yellow .label-red
 ```
 
+### 特殊使用
+
+- 引用相对路径文件时, 不带后缀, 如直接使用docs前路径下的`summary.md`文件, 即`./docs/summary` 这样使用路径即可  
+- ...
 
