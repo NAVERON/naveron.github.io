@@ -16,7 +16,7 @@ design
 
 > 之前模仿了华为的设计风格, 点~线~面和邀请函的学习 :  
 
-![HUAWEI HONER](../../assert/images/design/HUAWEI_HONOR.tif)  
+![HUAWEI HONER](../../assert/images/design/HUAWEI_HONOR.tif.jpg)  
 
 ### 深入设计和练习
 
