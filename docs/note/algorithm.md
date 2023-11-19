@@ -5,7 +5,7 @@ layout: post
 ---
 
 algorithm
-{: .lable .label-green}
+{: .label .label-green}
 
 # 算法
 

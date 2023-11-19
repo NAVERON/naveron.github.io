@@ -2,7 +2,7 @@ title: 玉龙视效工作室
 description: 玉龙个人网站博客聚集地
 theme: just-the-docs
 # logo: "https://avatars.githubusercontent.com/u/14134183?v=4"
-favicon_ico: "/favicon.ico"
+favicon_ico: /favicon.ico
 
 url: https://naveron.github.io/
 
@@ -12,13 +12,15 @@ aux_links_new_tab: true
 
 nav_external_links:
   - title: evs on github
-    url: "https://github.com/NAVERON/naveron.github.io"
+    url: https://github.com/NAVERON/naveron.github.io
     hide_icon: false
     opens_in_new_tab: true
   - title: evs on bilibili
-    url: "https://space.bilibili.com/89060131"
-    hilde_icon: false
+    url: https://space.bilibili.com/89060131
+    hide_icon: false
     opens_in_new_tab: true
+
+nav_external_links_new_tab: true
 
 # set back to top
 back_to_top: true
@@ -103,6 +105,12 @@ exclude:
 
 # plugins:
 #  - xxx
+
+
+ga_tracking: G-PC9RD6XFJZ
+ga_tracking_anonymize_ip: true
+
+
 
 
 

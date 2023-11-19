@@ -18,12 +18,7 @@ mermaid
 > 流程图
 
 ```mermaid
----
-    title: simple graph
----
-
 flowchart TB
-    %% standard normal flow chart graph, also flowchart
     init(["init state"]) 
     calcute[/"calcute number"/]
     running["simple running"]
@@ -55,7 +50,7 @@ flowchart TB
     end
     
     subgraph two
-        direction LR
+        direction TB
         mini_init --> working
         working ==> check
     end
