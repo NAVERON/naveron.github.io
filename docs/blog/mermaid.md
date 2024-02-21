@@ -19,23 +19,23 @@ mermaid
 
 ```mermaid
 flowchart TB
-    init(["init state"]) 
+    init(["init state"])
     calcute[/"calcute number"/]
     running["simple running"]
     check{"verify and check"}
     process[["for advance build"]]
     error{{"wrong things"}}
     ends(("end state"))
-
+    
     sub_init(["sub init"])
     sub_task["sub process"]
     sub_check{"verify"}
     sub_normal_running[[running]]
     sub_finish(("finish of sub"))
-
+    
     mini_init(("hello"))
     working((("very circle")))
-
+    
     init --> calcute
     calcute --> running
     running ==> check
