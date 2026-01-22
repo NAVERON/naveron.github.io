@@ -1,5 +1,5 @@
 ---
-title: tinuioc
+title: tinyioc
 parent: note
 layout: post
 ---
