@@ -1,51 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
 
-  <!-- Replace with your own title and description. -->
-  <title>Awesome Docsify Site</title>
-  <meta name="description" content="An awesome docsify site for publishing some content on the web.">
+    <!-- Replace with your own title and description. -->
+    <title>玉龙视觉效果工作室</title>
+    <meta name="description" content="玉龙视觉效果工作室的优秀 Docsify 文档站点，用于在网络上发布内容。">
 
-  <!-- Default Theme (see https://docsify.js.org/#/themes) -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <!-- Default Theme (see https://docsify.js.org/#/themes) -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+
+    <!-- Compressed -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sushantrahate/docsify-darkly-theme/css/darkly.min.css">
+    <!-- Mermaid -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+    <style>
+        /* Mermaid 黑暗主题适配 */
+        .mermaid {
+            background: #2d2d2d;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 8px 0;
+            text-align: center;
+        }
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+        /* 分页插件样式微调 */
+        .docsify-pagination-container {
+            border-top: 1px solid #444;
+        }
+    </style>
 
 </head>
 
 <body>
-  <div id="app"></div>
+    <div id="app"></div>
 
-  <script>
-    // Docsify Configuration (see https://docsify.js.org/#/configuration)
-    window.$docsify = {
-      name: 'Simple Docsify Template',
+    <script>
+        var num = 0;
 
-      // Sidebar Configuration
-      auto2top: true,
-      loadSidebar: true,
-      maxLevel: 0,
-      // Set subMaxLevel to 0 to remove automatic display of page table of contents (TOC) in Sidebar
-      subMaxLevel: 3,
+        // Docsify Configuration (see https://docsify.js.org/#/configuration)
+        window.$docsify = {
+            name: 'ERON VISUAL STUDIO',
+            repo: 'https://github.com/naveron/naveron.github.io',
 
-      // Search Plugin Configuration
-      search: {
-        placeholder: 'Type to search',
-        noData: 'No matches found.',
-        // Headline depth, 1 - 6
-        depth: 2,
-      }
-    };
-  </script>
+            coverpage: true,
+            basePath: 'docs/',
+            homepage: 'README.md',
+            loadSidebar: true,
+            loadNavbar: true,
+            auto2top: true,
+            maxLevel: 3,
+            subMaxLevel: 2,
+            notFoundPage: '_404.md',
+            formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
 
-  <!-- Required -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+            // Search Plugin Configuration
+            search: {
+                paths: 'auto',
+                placeholder: '输入搜索内容',
+                noData: '未找到匹配项',
+                depth: 2,
+            },
 
-  <!-- Recommended -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+            plugins: [
+                function (hook, vm) {
+                    hook.beforeEach(function (content) {
+                        return content.replace(/```mermaid([\s\S]*?)```/g, function (_, code) {
+                            return '<div class="mermaid">' + code.trim() + '</div>';
+                        });
+                    });
+                    hook.doneEach(function () {
+                        if (window.mermaid) {
+                            mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                        }
+                        if (window.MathJax && MathJax.typesetPromise) {
+                            MathJax.typesetPromise().catch(function (err) {
+                                console.error(err);
+                            });
+                        }
+                    });
+                }
+            ]
+        };
+    </script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            },
+            startup: {
+                typeset: false
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+    <!-- Required -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+    <!-- Recommended -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/emoji.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        if (window.mermaid) {
+            mermaid.initialize({ startOnLoad: false });
+        }
+    </script>
 </body>
+
 </html>
