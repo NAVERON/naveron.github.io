@@ -19,35 +19,28 @@ gantt
     dateFormat    YYYY-MM-DD
     axisFormat    %Y-%m-%d
     title    求学和职业生涯历程
-    %% 里程碑 name : type, 
     Initial milestone : milestone, initial, 2012-09-01, 1min
     Final milestone : milestone, final, 2023-04-01, 1min
-
     section 航海技术 本科
-    %% task显示名称 :当前状态 任务名称/taskId 开始时间/任务位置 结束时间/任务位置 
-    航海技术主要课程学习 :done, major, 2012-09-01, 2016-06-20 
-    计算机基础课和C语言基础 :done, basic, 2013-02-15, 2013-12-30 
-    辅修华科计算机双学位 :crit, minor, 2014-03-01, 2015-10-10 
-    第一个完整逻辑的C代码 :milestone, firstCmd, 2014-12-30, 1min 
-    第一个独立完成的UI项目 :milestone, firstProject, 2015-04-10, 1min 
-    船舶避碰仿真毕业设计 :active, codeBegin, 2015-07-01, 2015-10-10 
-    船舶避碰系列项目1-2版本 :active, 2015-11-01, 2016-08-30 
-    
+    航海技术主要课程学习 :done, major, 2012-09-01, 2016-06-20
+    计算机基础课和C语言基础 :done, basic, 2013-02-15, 2013-12-30
+    辅修华科计算机双学位 :crit, minor, 2014-03-01, 2015-10-10
+    第一个完整逻辑的C代码 :milestone, firstCmd, 2014-12-30, 1min
+    第一个独立完成的UI项目 :milestone, firstProject, 2015-04-10, 1min
+    船舶避碰仿真毕业设计 :active, codeBegin, 2015-07-01, 2015-10-10
+    船舶避碰系列项目1-2版本 :active, 2015-11-01, 2016-08-30
     section 交通信息工程及控制 研究生
-    研究生阶段学习 :done, searchBegin, 2016-05-20, 2019-07-10 
-    宣传部学习 :done, psLearning, 2016-10-15, 2017-07-01 
-    船舶避碰仿真3-4版本 :active, simulationUpdate, 2017-03-01, 2018-12-01 
-    创业公司学习锻炼 :crit, exercitation, 2017-09-01, 2017-12-30 
-    毕业小论文和大论文 :done, granduated, 2017-03-01, 2019-03-01 
-
+    研究生阶段学习 :done, searchBegin, 2016-05-20, 2019-07-10
+    宣传部学习 :done, psLearning, 2016-10-15, 2017-07-01
+    船舶避碰仿真3-4版本 :active, simulationUpdate, 2017-03-01, 2018-12-01
+    创业公司学习锻炼 :crit, exercitation, 2017-09-01, 2017-12-30
+    毕业小论文和大论文 :done, granduated, 2017-03-01, 2019-03-01
     section 小米工作
-    小米南京应用商店 :crit, firstWork, 2019-07-22, 2022-01-27 
-
+    小米南京应用商店 :crit, firstWork, 2019-07-22, 2022-01-27
     section 近期
-    过年访亲 :done, home, 2022-01-29, 2022-02-10 
-    旧开源项目整理 :done, openSource, 2022-02-10, 2022-03-06 
-    项目复习和整理 :active, forJob, 2022-03-07, 2022-10-01 
-    
+    过年访亲 :done, home, 2022-01-29, 2022-02-10
+    旧开源项目整理 :done, openSource, 2022-02-10, 2022-03-06
+    项目复习和整理 :active, forJob, 2022-03-07, 2022-10-01
     section 华为OD工作
     华为云工业软件云项目 :active, forDev, 2022-12-08, 2023-12-01
 ```

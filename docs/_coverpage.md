@@ -11,7 +11,7 @@
 [开始阅读](README.md)
 [GitHub](https://github.com/naveron)
 
-![color](#1e1e1e)
+![color](#2d2d2d)
 
 
 

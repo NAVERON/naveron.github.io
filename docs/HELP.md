@@ -1,31 +1,109 @@
-# Docsify 模板
+# 📖 站点维护指南
 
-> 一个简单的 [Docsify](https://github.com/docsifyjs/docsify/) 模板，用于创建基于 Markdown 的文档站点，无需构建过程。
+> 本文档帮助你快速上手维护本站点，包括目录结构、如何新增文档、可用功能及注意事项。
 
-## 站点设置
+---
 
-### 静态网络服务器
-将这些模板文件上传到任何静态网络服务器。`.nojekyll` 文件仅在 GitHub Pages 上托管时需要，否则可以删除。
+## 🗂️ 目录结构
 
-### GitHub Pages
+```
+/
+├── index.html              # 站点入口，Docsify 配置、插件、主题
+├── docs/                   # 所有文档内容
+│   ├── README.md           # 首页 / 文档首页
+│   ├── _sidebar.md         # 侧边栏导航配置
+│   ├── _navbar.md          # 顶部导航栏配置
+│   ├── _coverpage.md       # 封面页
+│   ├── _404.md             # 404 页面
+│   ├── HELP.md             # 本文件
+│   ├── daily/              # 个人日记
+│   │   └── summary.md
+│   └── program/            # 编程笔记
+│       ├── my-script.md
+│       ├── git-learning.md
+│       ├── code-style-guild.md
+│       ├── mathjax-learning.md
+│       ├── mermaid-learning.md
+│       └── raspberry-pi-learning.md
+└── resource/               # 资源文件
+    └── images/
+```
 
-#### 托管站点
+---
 
-要在 GitHub Pages 上托管此模板，请执行以下操作：
+## ✍️ 如何新增文档
 
-1. 如果尚未登录，请登录 GitHub
-2. 点击此 GitHub 仓库右上角的 **Use this template** 按钮，然后选择 **Create a new repository**
-3. 输入新仓库的名称，然后点击 **Create repository** 按钮
-4. 创建新仓库后，转到 **Settings**，然后从左侧边栏选择 **Pages**，在 **Branch** 下选择 **main**，然后点击 **Save** 按钮
-5. 等待一两分钟，然后刷新同一 **Pages** 页面 - 一旦您的站点准备就绪，屏幕顶部将显示一条消息以及站点链接和 **Visit site** 按钮
+1. 在 `docs/` 下创建 `.md` 文件（可放在子目录中）
+2. 编辑 `docs/_sidebar.md`，添加导航链接
+3. 如果需要在顶部导航栏显示，编辑 `docs/_navbar.md`
+4. 本地预览满意后提交推送即可
 
-#### 编辑内容
+**链接写法：**
+```markdown
+- [显示名称](相对路径.md)
+- [我的笔记](program/my-script.md)
+```
 
-如何在 GitHub Pages 上编辑新 Docsify 站点的内容？查看您要编辑的 Markdown 页面（例如，**README.md**），然后点击 **Pencil Icon**，然后通过点击绿色的 **Commit changes...** 按钮保存任何更改。在短短几分钟内，Docsify 站点将自动更新以反映这些更改。
+---
 
-### 本地查看
-在仓库文件夹中运行 `npx serve .`（Node.js 用户）或 `python -m http.server 8000`（Python 用户）以本地运行服务。
+## 🚀 本地预览
 
-## Docsify 文档
+```shell
+# 在项目根目录运行
+docsify serve .
+# 访问 http://localhost:3000
+```
 
-要了解有关使用 Docsify 的更多信息，请访问 https://docsify.js.org。.
+---
+
+## ⚡ 可用功能
+
+| 功能 | 说明 | 使用方法 |
+|------|------|----------|
+| **主题切换** | 暗色/亮色一键切换 | 点击右下角 ☀️ / 🌙 按钮（偏好自动保存） |
+| **Mermaid 图表** | 流程图、时序图、甘特图、类图等 | 使用 ` ```mermaid ` 代码块 |
+| **MathJax 公式** | LaTeX 数学公式渲染 | 行内 `$...$`，块级 `$$...$$` |
+| **Emoji** | 快速插入表情 | 输入 `:smile:`、`:+1:`、`:rocket:` 等 |
+| **全文搜索** | 搜索所有文档内容 | `Ctrl+K` / `Cmd+K` 或点击搜索图标 |
+| **图片缩放** | 点击图片放大查看 | 鼠标左键单击任意图片 |
+| **代码复制** | 一键复制代码片段 | 鼠标悬停代码块右上角按钮 |
+| **分页导航** | 上下页快捷跳转 | 页面底部自动出现 |
+| **更新时间** | 显示文件最后修改时间 | 页面末尾自动显示 |
+
+---
+
+## ⚠️ Mermaid 注意事项（v11.14.0）
+
+> 本站使用 Mermaid 11.14.0，语法要求比旧版更严格：
+
+- ❌ **图内部不能有空行** — 空行会导致 `Syntax error`
+- ❌ **不支持 `%%` 注释** — 请直接删除注释行
+- ❌ **不支持 `~Cat~` 泛型语法** — 如 `List~String~` 需改为 `string[]`
+- ✅ 使用 `branch` / `checkout`（**不是** `git branch` / `git checkout`）
+- ✅ 标签语法 `tag:"v1.0"` 正常使用
+- ✅ 前导元数据 `--- title: ... ---` 后需紧接图类型声明，不能有空行
+
+---
+
+## 🎨 主题说明
+
+- **暗色主题**（默认）：基于 [docsify-darkly-theme](https://github.com/sushantrahate/docsify-darkly-theme)
+- **亮色主题**：基于 Docsify 官方 Vue 主题
+- 切换偏好保存在浏览器 `localStorage` 中
+
+---
+
+## 📦 依赖清单
+
+| 资源 | 版本 | 用途 |
+|------|------|------|
+| Docsify | 4.x | 文档框架 |
+| Docsify Darkly Theme | latest | 暗色主题 |
+| Mermaid | 11.14.0 | 图表渲染 |
+| MathJax | 3.x | 公式渲染 |
+| docsify-copy-code | latest | 代码复制 |
+| docsify-pagination | latest | 分页导航 |
+
+---
+
+> 💡 **快速开始：** 在 `docs/` 下创建 `.md` 文件 → 更新 `_sidebar.md` → `docsify serve .` 预览 → 推送部署
