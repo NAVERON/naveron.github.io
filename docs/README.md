@@ -4,11 +4,6 @@
 
 所有文档和配置文件统一放在 `docs/` 目录下，侧边栏、导航栏、封面等配置也在此目录中。新增文章时只需在 `docs/` 下创建 `.md` 文件，然后更新 `_sidebar.md` 添加链接即可。
 
-## 目录
-
-- [个人日记](daily/myself.md)
-- [编程笔记](program/my-script.md)
-
 ## Mermaid 示例
 
 ```mermaid
