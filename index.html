@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+
+    <title>玉龙视觉效果工作室</title>
+    <meta name="description" content="玉龙视觉效果工作室 — 用技术创造视觉之美。">
+
+    <link rel="icon" href="./favicon.ico">
+
+    <!-- 主题样式：暗色（默认）/ 亮色 -->
+    <link id="theme-css-dark" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/sushantrahate/docsify-darkly-theme/css/darkly.min.css">
+    <link id="theme-css-light" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" disabled>
+
+    <!-- Mermaid -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+
+    <style>
+        /* ===== 全局样式 ===== */
+        .mermaid {
+            background: #2d2d2d;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 8px 0;
+            text-align: center;
+        }
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .docsify-pagination-container {
+            border-top: 1px solid #444;
+        }
+
+        /* ===== 亮色主题覆盖 ===== */
+        html.light-theme .mermaid {
+            background: #f5f5f5;
+        }
+        html.light-theme .docsify-pagination-container {
+            border-top: 1px solid #ddd;
+        }
+        html.light-theme section.cover {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f0 100%) !important;
+        }
+        html.light-theme section.cover .cover-main > p:last-child a:last-child {
+            color: #2979ff;
+        }
+        html.light-theme section.cover .cover-main > p:last-child a:first-child {
+            border-color: #2979ff;
+            color: #2979ff;
+        }
+
+        /* ===== 主题切换按钮 ===== */
+        #theme-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #444;
+            color: #f0c040;
+        }
+        #theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+        html.light-theme #theme-toggle {
+            background: #fff;
+            color: #555;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- Docsify 配置 -->
+    <script>
+        window.$docsify = {
+            name: 'ERON VISUAL STUDIO',
+            repo: 'https://github.com/naveron/naveron.github.io',
+            coverpage: true,
+            basePath: 'docs/',
+            homepage: 'README.md',
+            loadSidebar: true,
+            loadNavbar: true,
+            auto2top: true,
+            maxLevel: 3,
+            subMaxLevel: 2,
+            notFoundPage: '_404.md',
+            formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+            search: {
+                paths: 'auto',
+                placeholder: '输入搜索内容',
+                noData: '未找到匹配项',
+                depth: 2,
+            },
+            plugins: [
+                function (hook, vm) {
+                    hook.beforeEach(function (content) {
+                        return content.replace(/```mermaid([\s\S]*?)```/g, function (_, code) {
+                            return '<div class="mermaid">' + code.trim() + '</div>';
+                        });
+                    });
+                    hook.doneEach(function () {
+                        if (window.mermaid) {
+                            mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                        }
+                        if (window.MathJax && MathJax.typesetPromise) {
+                            MathJax.typesetPromise().catch(function (err) {
+                                console.error(err);
+                            });
+                        }
+                    });
+                }
+            ]
+        };
+    </script>
+
+    <!-- MathJax 配置 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            },
+            startup: { typeset: false }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Docsify 核心与插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/emoji.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        if (window.mermaid) {
+            mermaid.initialize({ startOnLoad: false });
+        }
+    </script>
+
+    <!-- 主题切换按钮与逻辑 -->
+    <button id="theme-toggle" onclick="toggleTheme()" title="切换主题">☀️</button>
+    <script>
+        var themeDarkCss = document.getElementById('theme-css-dark');
+        var themeLightCss = document.getElementById('theme-css-light');
+        var themeBtn = document.getElementById('theme-toggle');
+        var themeIsDark = localStorage.getItem('theme') !== 'light';
+
+        function applyTheme(dark) {
+            themeIsDark = dark;
+            themeDarkCss.disabled = !dark;
+            themeLightCss.disabled = dark;
+            document.documentElement.classList.toggle('light-theme', !dark);
+            themeBtn.textContent = dark ? '☀️' : '🌙';
+            localStorage.setItem('theme', dark ? 'dark' : 'light');
+        }
+
+        function toggleTheme() {
+            applyTheme(!themeIsDark);
+        }
+
+        applyTheme(themeIsDark);
+    </script>
+</body>
+
+</html>
