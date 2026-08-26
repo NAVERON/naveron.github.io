@@ -5,14 +5,15 @@
     - [帮助](HELP.md)
 
 - 🌐 关于
-    - [知乎](https://www.zhihu.com/people/wangyulong.eron)
     - [掘金](https://juejin.cn/user/2930660083507819)
+    - [知乎](https://www.zhihu.com/people/wangyulong.eron)
+    - [博客园](https://www.cnblogs.com/naveron)
     - [B站](https://space.bilibili.com/89060131)
 
 - 👨‍💻 编程
     - [GITHUB](https://github.com/naveron)
-    - [GITEE](https://gitee.com/naveron)
-    - [CODEUP](https://codeup.aliyun.com/)
+    - [CODEBERG](https://codeberg.org/NAVERON)
     - [CNB](https://cnb.cool/u/wangyulong.eron)
+    - [CODEUP](https://codeup.aliyun.com/)
 
 
