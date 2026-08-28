@@ -9,8 +9,8 @@
 - 知识沉淀 · 持续学习进步
 
 [开始阅读](README.md)
-[GitHub](https://github.com/naveron)
-[CodeBerg](https://codeberg.org/NAVERON)
+[GITHUB](https://github.com/naveron)
+[CODEBERG](https://codeberg.org/NAVERON)
 
 ![color](#2d2d2d)
 
