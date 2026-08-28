@@ -21,22 +21,66 @@
     border-top: 1px solid #444;
 }
 
+/* ===== 主题色（docsify v5 官方主题属性，改这里即可换主色） ===== */
+:root {
+    --theme-color: #8C2633; /* 绛红（宫墙红） */
+}
+
+/* ===== 封面页：自适应明暗的绛红渐变 ===== */
+section.cover {
+    background:
+        radial-gradient(ellipse at 15% 20%, color-mix(in srgb, var(--theme-color) 26%, transparent), transparent 58%),
+        radial-gradient(ellipse at 85% 80%, color-mix(in srgb, var(--theme-color) 18%, transparent), transparent 55%),
+        linear-gradient(160deg, var(--color-bg), color-mix(in srgb, var(--theme-color) 14%, var(--color-bg))) !important;
+}
+/* 封面标题：主题色渐变文字 */
+section.cover .cover-main h1 {
+    background: linear-gradient(120deg, var(--theme-color), color-mix(in srgb, var(--theme-color) 40%, #fff));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+/* ===== 封面按钮：统一样式，保证文字清晰可读 ===== */
+section.cover .cover-main > p:last-child a {
+    display: inline-block;
+    margin: 0.3em 0.35em;
+    padding: 0.55em 1.35em;
+    border-radius: 6px;
+    border: 1.5px solid var(--theme-color);
+    font-weight: 600;
+    transition: transform 0.15s, background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+/* 主按钮（开始阅读）：实心主题色 + 白字 */
+section.cover .cover-main > p:last-child a:first-child {
+    background: var(--theme-color);
+    color: #fff;
+    box-shadow: 0 4px 14px color-mix(in srgb, var(--theme-color) 45%, transparent);
+}
+section.cover .cover-main > p:last-child a:first-child:hover {
+    background: color-mix(in srgb, var(--theme-color) 80%, #000);
+    transform: translateY(-1px);
+}
+/* 次按钮（GITHUB / CODEBERG）：描边 */
+section.cover .cover-main > p:last-child a:not(:first-child) {
+    background: color-mix(in srgb, var(--theme-color) 12%, transparent);
+    color: var(--theme-color);
+}
+section.cover .cover-main > p:last-child a:not(:first-child):hover {
+    background: var(--theme-color);
+    color: #fff;
+}
+/* 暗色模式下描边按钮文字提亮，避免深色文字看不清 */
+html:not(.light-theme) section.cover .cover-main > p:last-child a:not(:first-child) {
+    color: color-mix(in srgb, var(--theme-color) 55%, #fff);
+}
+
 /* ===== 亮色主题覆盖 ===== */
 html.light-theme .mermaid {
     background: #f5f5f5;
 }
 html.light-theme .docsify-pagination-container {
     border-top: 1px solid #ddd;
-}
-html.light-theme section.cover {
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f0 100%) !important;
-}
-html.light-theme section.cover .cover-main > p:last-child a:last-child {
-    color: #2979ff;
-}
-html.light-theme section.cover .cover-main > p:last-child a:first-child {
-    border-color: #2979ff;
-    color: #2979ff;
 }
 
 /* ===== 主题切换按钮 ===== */
@@ -85,20 +129,28 @@ html.light-theme #theme-toggle {
     border-radius: 6px 6px 0 0;
 }
 .code-block-toolbar .code-collapse-btn {
-    padding: 2px 12px;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #bdbdbd;
-    background: #2d2d2d;
-    border: 1px solid #444;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    color: #8b949e;
+    background: transparent;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    user-select: none;
     transition: background 0.2s, color 0.2s;
 }
 .code-block-toolbar .code-collapse-btn:hover {
-    background: #3a3a3a;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--theme-color);
+}
+.code-collapse-icon {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    transition: transform 0.2s;
 }
 .code-block-wrapper pre {
     margin: 0 !important;
@@ -108,18 +160,16 @@ html.light-theme #theme-toggle {
     display: none;
 }
 .code-block-wrapper.collapsed .code-collapse-btn {
-    color: #2979ff;
-    border-color: #2979ff;
+    color: var(--theme-color);
 }
 html.light-theme .code-block-toolbar {
     background: #f6f8fa;
     border-color: #e1e4e8;
 }
 html.light-theme .code-block-toolbar .code-collapse-btn {
-    color: #24292e;
-    background: #fff;
-    border-color: #d0d7de;
+    color: #57606a;
 }
 html.light-theme .code-block-toolbar .code-collapse-btn:hover {
-    background: #f3f4f6;
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--theme-color);
 }

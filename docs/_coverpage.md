@@ -12,7 +12,5 @@
 [GITHUB](https://github.com/naveron)
 [CODEBERG](https://codeberg.org/NAVERON)
 
-![color](#2d2d2d)
-
 
 

@@ -84,14 +84,25 @@ function bindCodeCollapse() {
         var toolbar = document.createElement('div');
         toolbar.className = 'code-block-toolbar';
 
+        // 折叠按钮：仅显示箭头图标（展开 ▾ / 折叠 ▸），无障碍语义保留在 aria-label
         var btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'code-collapse-btn';
-        btn.textContent = '折叠代码';
+        btn.title = '折叠代码';
+        btn.setAttribute('aria-label', '折叠代码');
+
+        var icon = document.createElement('span');
+        icon.className = 'code-collapse-icon';
+        icon.textContent = '▾';
+        btn.appendChild(icon);
+
         btn.addEventListener('click', function () {
             var collapsed = pre.classList.toggle('collapsed');
             wrapper.classList.toggle('collapsed', collapsed);
-            btn.textContent = collapsed ? '展开代码' : '折叠代码';
+            icon.textContent = collapsed ? '▸' : '▾';
+            var label = collapsed ? '展开代码' : '折叠代码';
+            btn.title = label;
+            btn.setAttribute('aria-label', label);
         });
 
         toolbar.appendChild(btn);
