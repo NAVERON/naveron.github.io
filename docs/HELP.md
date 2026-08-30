@@ -8,7 +8,13 @@
 
 ```
 /
-├── index.html              # 站点入口，Docsify 配置、插件、主题
+├── index.html              # 站点入口（引用主题、样式与脚本）
+├── css/
+│   └── custom.css          # 全部自定义样式（主题色、封面、代码折叠等）
+├── js/
+│   ├── docsify.config.js   # Docsify 配置与自定义插件（Mermaid/MathJax/代码折叠）
+│   ├── mathjax.config.js   # MathJax 配置
+│   └── theme-toggle.js     # 暗色/亮色主题切换逻辑
 ├── docs/                   # 所有文档内容
 │   ├── README.md           # 首页 / 文档首页
 │   ├── _sidebar.md         # 侧边栏导航配置
@@ -26,7 +32,9 @@
 │       ├── mermaid-learning.md
 │       └── raspberry-pi-learning.md
 └── resource/               # 资源文件
+    ├── files/
     └── images/
+        ├── design/  letters/  posters/  tools/
 ```
 
 ---
@@ -54,6 +62,8 @@ docsify serve .
 # 访问 http://localhost:3000
 ```
 
+> 使用 docsify-cli 5.x，已无旧版的 `punycode` 弃用警告。
+
 ---
 
 ## ⚡ 可用功能
@@ -61,6 +71,7 @@ docsify serve .
 | 功能 | 说明 | 使用方法 |
 |------|------|----------|
 | **主题切换** | 暗色/亮色一键切换 | 点击右下角 ☀️ / 🌙 按钮（偏好自动保存） |
+| **代码折叠** | 长代码块可折叠，点击头部展开/收起 | 点击代码块头部任意位置（或按 `Enter`/`Space`） |
 | **Mermaid 图表** | 流程图、时序图、甘特图、类图等 | 使用 ` ```mermaid ` 代码块 |
 | **MathJax 公式** | LaTeX 数学公式渲染 | 行内 `$...$`，块级 `$$...$$` |
 | **Emoji** | 快速插入表情 | 输入 `:smile:`、`:+1:`、`:rocket:` 等 |
@@ -72,9 +83,9 @@ docsify serve .
 
 ---
 
-## ⚠️ Mermaid 注意事项（v11.14.0）
+## ⚠️ Mermaid 注意事项（v11）
 
-> 本站使用 Mermaid 11.14.0，语法要求比旧版更严格：
+> 本站使用 Mermaid 11（版本锁定 `mermaid@11`），语法要求比旧版更严格：
 
 - ❌ **图内部不能有空行** — 空行会导致 `Syntax error`
 - ❌ **不支持 `%%` 注释** — 请直接删除注释行
@@ -87,22 +98,26 @@ docsify serve .
 
 ## 🎨 主题说明
 
-- **暗色主题**（默认）：基于 [docsify-darkly-theme](https://github.com/sushantrahate/docsify-darkly-theme)
-- **亮色主题**：基于 Docsify 官方 Vue 主题
-- 切换偏好保存在浏览器 `localStorage` 中
+- **框架**：Docsify v5（核心主题 `core` + 暗色插件 `core-dark`）
+- **暗色 / 亮色**：通过右下角 ☀️ / 🌙 按钮切换，偏好保存在浏览器 `localStorage`
+- **主色调**：绛红（宫墙红 `#8C2633`），由 `css/custom.css` 中的 `--theme-color` 控制，**改这一处即可换色**
+- **封面**：自适应明暗的绛红渐变背景，标题带渐变文字效果
 
 ---
 
 ## 📦 依赖清单
 
+> 全部第三方资源均通过 `cdn.jsdmirror.com`（jsdelivr 中国镜像）加载，国内访问更快。
+
 | 资源 | 版本 | 用途 |
 |------|------|------|
-| Docsify | 4.x | 文档框架 |
-| Docsify Darkly Theme | latest | 暗色主题 |
-| Mermaid | 11.14.0 | 图表渲染 |
+| Docsify | 5.0.0 | 文档框架 |
+| docsify-cli | 5.0.0 | 本地预览（`docsify serve`） |
+| Mermaid | 11.x | 图表渲染 |
 | MathJax | 3.x | 公式渲染 |
-| docsify-copy-code | latest | 代码复制 |
-| docsify-pagination | latest | 分页导航 |
+| docsify-copy-code | 3.x | 代码复制 |
+| docsify-pagination | 2.x | 分页导航 |
+| zoom-image | v5 内置 | 图片缩放 |
 
 ---
 
