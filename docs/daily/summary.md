@@ -9,9 +9,9 @@
 - **求职意向**：软件工程师 / 全栈工程师 / 设计师
 - **联系邮箱**：wangyulong.eron@outlook.com
 - **教育背景**：武汉理工大学·航运学院（硕士 / 本科）｜华中科技大学·计算机（辅修双学位）
-- **简历文件**：[English CV](https://github.com/NAVERON/NAVERON/blob/main/ApplyForSoftwareEngineer-WangYuLong-Resume.pdf) · [中文简历](https://github.com/NAVERON/NAVERON/blob/main/%E5%BA%94%E8%81%98%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88-%E7%8E%8B%E7%8E%89%E9%BE%99-%E7%AE%80%E5%8E%86.pdf)
-- **代码平台**：[GitHub](https://github.com/NAVERON) · [Gitee](https://gitee.com/naveron) · [GitLab](https://gitlab.com/NAVERON)
-- **博客**：[博客园](https://www.cnblogs.com/eronnav/) · [GitHub Pages](https://naveron.github.io/)
+- **简历文件**：[English CV]() · [中文简历]()
+- **代码平台**：[GitHub](https://github.com/naveron)  · [Codeberg](https://codeberg.org/naveron)  · [CNB](https://cnb.cool/u/wangyulong.eron)
+- **社交平台**：[博客园](https://www.cnblogs.com/naveron/) · [掘金](https://juejin.cn/user/2930660083507819) · [知乎](https://www.zhihu.com/people/wangyulong.eron) · [B站](https://space.bilibili.com/89060131)
 
 ## 📌 个人简介
 

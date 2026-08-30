@@ -25,16 +25,16 @@
 
 ### 代码平台
 
-- [GitHub](https://github.com/NAVERON)
+- [GitHub](https://github.com/naveron)
 - [Codeberg](https://codeberg.org/naveron)
-- [Gitee](https://gitee.com/naveron)
-- [GitLab](https://gitlab.com/NAVERON)
+- [CNB](https://cnb.cool/u/wangyulong.eron)
 
 ### 社交平台
 
+- [掘金](https://juejin.cn/user/2930660083507819)
 - [知乎](https://www.zhihu.com/people/wangyulong.eron)
-- [Bilibili](https://space.bilibili.com/89060131)
-- [语雀](https://www.yuque.com/eronyulong)
+- [博客园](https://www.cnblogs.com/naveron)
+- [B站](https://space.bilibili.com/89060131)
 
 ### 经典项目
 
