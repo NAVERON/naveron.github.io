@@ -4,7 +4,7 @@
   - [我的简历](daily/summary.md)
 
 - 💻 编程笔记
-  - [我的脚本](program/my-script.md)
+  - [我的脚本](program/bash-script-learn-usage.md)
   - [Git学习](program/git-learning.md)
   - [编码规范](program/code-style-guild.md)
   - [Mathjax学习](program/mathjax-learning.md)
