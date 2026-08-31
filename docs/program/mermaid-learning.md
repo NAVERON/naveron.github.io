@@ -1,9 +1,11 @@
 
-# mermaid
+# Mermaid 学习笔记
 
-> [https://mermaid.js.org/](https://mermaid.js.org/)  
+> 官方站点：[https://mermaid.js.org/](https://mermaid.js.org/)
 
-## demos
+Mermaid 是一个很实用的流程图和结构图工具。它不需要复杂的本地安装，直接在 Markdown 里写语法就能生成图，特别适合我这种喜欢用文档记笔记的人。
+
+## 示例
 
 ### flowchart/graph
 
@@ -311,13 +313,13 @@ gitGraph
 ```
 
 
-## actually scene usage
+## 实际场景中的使用
 
-> 实际场景中的表达实践, 将之前的思路完整使用编程绘图语言描述  
+> 这部分主要是把前面的思路串起来，用更结构化的方式来表达实际场景中的流程和关系。
 
-## other similar
+## 其他类似工具
 
-> 其他一些类似的工具和推荐, 关于markdown draw 整理知识相关的编辑器  
+> 下面这些工具也非常适合做思维导图、流程图或知识整理：
 
 - [PlantUML](https://plantuml.com/zh/)  
 - [Graphviz](https://graphviz.org/)  

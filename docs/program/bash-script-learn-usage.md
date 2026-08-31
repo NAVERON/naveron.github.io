@@ -1,14 +1,15 @@
 
-# coding environment quick rebuild
+# Coding Environment Quick Rebuild
 
-> AUTHOR : WANGYULONG / ERON
+> 作者：WANGYULONG / ERON
 
-## How To Start
+## 使用方式
 
-**Just run `sudo init.sh` script, press `ENTER` and wait for complete ~**
+**直接运行 `sudo init.sh` 脚本，然后按回车键等待安装完成即可。**
 
-**Relax and go for a cup of TEA !**
+**放松一下，喝杯茶，继续往下做别的事就行。**
 
+这是一份比较偏“开发环境一键初始化”的脚本笔记，重点是把常用开发工具、环境变量和基础配置整理成可重复执行的流程。 
 ## Basic Tools
 
 1. command line tools

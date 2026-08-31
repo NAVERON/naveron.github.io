@@ -1,77 +1,81 @@
 
-# git
+# Git 学习笔记
 
-## git 资料
+## Git 资料
 
-> Git 官网地址 : [https://git-scm.com](https://git-scm.com)  
-> Git 各平台可视化操作客户端 : [https://git-scm.com/downloads/guis](https://git-scm.com/downloads/guis)  
-> 官方git指导书 : [Git probook](https://git-scm.com/book/en/v2)  
+> Git 官网地址：[https://git-scm.com](https://git-scm.com)  
+> Git 各平台可视化操作客户端：[https://git-scm.com/downloads/guis](https://git-scm.com/downloads/guis)  
+> 官方 Git 指南：[Git Probook](https://git-scm.com/book/en/v2)  
 > ...
 
-**本学习摘录自以下教程, 仅提供学习**  
+这部分内容主要是我在学习 Git 过程中的整理记录，重点放在命令使用和实际协作思路上，不涉及大而全的教程整理。
 
-> 在线动画演示和练习操作git的网站 [https://github.com/pcottle/learnGitBranching](https://github.com/pcottle/learnGitBranching) : [Learn Git Branching](https://learngitbranching.js.org)  
+> 在线动画演示和练习 Git 的网站：[https://github.com/pcottle/learnGitBranching](https://github.com/pcottle/learnGitBranching)；对应入口：[Learn Git Branching](https://learngitbranching.js.org)
 
-## git 命令 
+## Git 命令
 
-### git 本地分支
+### Git 本地分支
 
 #### 创建分支
 
 ```shell
-git branch xxx # 创建一个分支, 但是不切换到锌粉之
-git checkout -b xxx # 创建并切换新分支 
+git branch xxx # 创建分支，但不会切换到该分支
+git checkout -b xxx # 创建并切换到新分支
 ```
 
 #### 撤销变更
 
-一般有2个命令, `git reset` `git revert`, reset命令彻底删除更改, 回退上一个版本, revert新增一个提交, 表示某一个提交撤回  
-一般本地自己的提交使用`reset`命令删除, 远程主库使用`revert`命令, 用来告诉所有人撤销信息  s
+通常有两个常见命令：`git reset` 和 `git revert`。
 
-#### 修改一些commit
+- `git reset`：直接撤销本地修改，通常用于回退到上一个版本，适合自己的本地提交；
+- `git revert`：新增一个提交来“回滚”某次提交，适合远程主分支或团队协作场景，因为它保留了历史记录，并能让别人知道某个提交被撤销了。
 
-- `cherry-pick` 命令, 挑选提交新增到目标分支  
-- `rebase -i/--interactive` 命令, 可以修改多个提交的顺序, 删除某个多余的提交, 病休该提交语句message  
-- `git commit --amend` 可以修改最近一次提交的message
-- `git tag v1 c1` 设置c1提交位置tag  
+#### 修改某些 commit
 
-案例 `git rebase -i HEAD~4`合并当前位置向前4个提交 
-如果需要在某一个提交节点打上tag, 可以使用`tag`命令
+- `cherry-pick`：挑选某个提交，复制到目标分支；
+- `rebase -i/--interactive`：可以修改提交顺序、删除多余提交，甚至修改提交信息；
+- `git commit --amend`：修改最近一次提交的 message；
+- `git tag v1 c1`：给某个提交节点打 tag。
 
-#### git 的指针`HEAD`概念
+常见例子：`git rebase -i HEAD~4` 可以把当前提交前 4 个 commit 重新整理。
 
-git使用`checkout`命令时, 可以看作是操作当前指针指向某一个提交, 而不是分支名, 一次提交HEAD自动跟随提交前进  
+如果需要在某一提交节点打 tag，也可以直接使用 `tag` 命令。
 
-> 每一次提交会生成哈希值(给予SHA-1), `git log`查询所有的提交记录  
-> `^`上一个提交, `~<num>`向前几个提交, 如`git checkout main^`会将当前指向指向前一个提交
+#### Git 的指针 `HEAD`
 
-### git 远程分支 
+`git checkout` 其实就是让当前指针指向某个提交，而不一定是某个分支名。每次提交之后，`HEAD` 都会自动跟着前进。
 
-一般团队合作的时候, 流程类似如下  
-- 克隆远程仓库到本地
-- 基于主分支创建自己的分支
-- 在自己的分支上开发和提交
-- `git fetch` 获取最新远程提交
-- `get rebase origin/main` rebase操作, 将自己的提交迁移到主提交之后, 这里可能会存在解决冲突的问题
-- 以上两步`git pull --rebase`实现
-- `git push` 推送子级的提交到原成
-- 一般团队开发中, 免不了提交冲突, 多人开发同一块内容会导致这种问题, 最好的办法是适当使用rebase + 合理的项目管理 
+> 每次提交都会生成一个哈希值（SHA-1），可以用 `git log` 查看历史记录。  
+> `^` 表示上一个提交，`~<num>` 表示往前跳若干次提交，比如 `git checkout main^` 会让当前指针指向前一个提交。
 
-> `rebase` 和 `merge`的主要区别是 : merge保留了提交历史, rebase 梳理了提交线, 提交很整齐; 两者根据实际情况使用  
+### Git 远程分支
 
-#### 追踪分支trace
+团队协作时，通常都遵循类似这样的流程：
 
-一般`git pull`命令或从远程克隆到本地时, git会自动创建并设置本地分支追踪远程分支, 比如`main`追踪`origin/main`分支  
-如果需要自定义设置git某个分支追踪某个远程分支， 可以使用以下语法实现  
+- 先克隆远程仓库到本地；
+- 基于主分支创建自己的开发分支；
+- 在自己的分支上编写和提交代码；
+- 用 `git fetch` 获取最新远程提交；
+- 执行 `git rebase origin/main`，把自己的提交整理到最新主分支之后；
+- 解决冲突；
+- 用 `git push` 推送改动；
+- 在团队协作中，冲突是常见现象，尤其是多人改同一块代码时，最好结合 `rebase` 和良好的项目管理来控制提交节奏。
+
+> `rebase` 和 `merge` 的主要区别在于：`merge` 会保留历史记录，而 `rebase` 会让提交线更整齐、更干净。两者都合理，实际使用中要看具体场景。
+
+#### 追踪分支（trace）
+
+正常情况下，`git pull` 或从远程克隆项目时，Git 会自动创建并关联本地分支与远程分支，例如 `main` 追踪 `origin/main`。  
+如果你想手动指定某个本地分支跟踪哪个远程分支，可以用下面的写法：
 
 ```shell
 git branch -u origin/main xxx 
 git checkout -b xxx origin/main && git pull or git push
 ```
 
-#### push参数
+#### push 参数
 
-一般我们使用`git push` 命令会把当前的本地分支推送到track远程分支, 这里可以指定push参数  
+通常使用 `git push` 时，Git 会把当前本地分支推送到其跟踪的远程分支；但如果需要，也可以显式指定 push 参数。
 
 ```shell
 git push <remote> <place>
@@ -87,9 +91,9 @@ git push origin feature:main
 # 以上表示将本地的feature 推送到远程main分支上 
 ```
 
-#### fetch参数
+#### fetch 参数
 
-与push类似， 可以将远程/本地的提交同步  
+和 push 类似，`fetch` 也可以用来同步远程和本地的 commit 记录。
 
 ```shell
 git fetch origin foo
@@ -100,8 +104,8 @@ git fetch origin main:foo # 将远程main提交记录 同步到本地origin/foo 
 
 > `git fetch`如果不带参数, 会同步所有远程分支到本地对应的远程分支, 拉取最新的提交更新  
 
-pull 相当于fetch和merge的合体  
-一个很有意思的案例`get pull origin main:foo`, 当前本地分支在`test`, 这样操作会从远程拉取main分支, 并在本地创建foo分支, foo分支提交是从main分支同步过来的, 然后当前分支合并`foo`分支的提交  
+`pull` 实际上相当于 `fetch + merge` 的组合。  
+一个很有意思的例子是：`git pull origin main:foo`，当前本地分支在 `test` 时，这样会从远程拉取 `main` 分支，并在本地创建 `foo` 分支；`foo` 分支中的提交来自 `main`，随后当前分支再合并这部分内容。
 
 ### git 之前的笔记
 
