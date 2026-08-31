@@ -113,45 +113,61 @@ html.light-theme #theme-toggle {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== 代码块折叠 / 展开 ===== */
+/* ===== 代码块折叠 / 展开（点击头部折叠） ===== */
 .code-block-wrapper {
     position: relative;
     margin: 1em 0;
 }
+/* 可点击的代码块头部 */
 .code-block-toolbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 8px;
     padding: 6px 10px;
     background: #1e1e1e;
     border: 1px solid #3a3a3a;
     border-bottom: none;
     border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s, border-color 0.2s;
 }
-.code-block-toolbar .code-collapse-btn {
+.code-block-toolbar:hover {
+    background: color-mix(in srgb, var(--theme-color) 16%, #1e1e1e);
+    border-color: color-mix(in srgb, var(--theme-color) 50%, #3a3a3a);
+}
+.code-block-toolbar:focus-visible {
+    outline: 2px solid var(--theme-color);
+    outline-offset: -1px;
+}
+/* 折叠指示图标（明显的绛红箭头） */
+.code-collapse-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
+    width: 26px;
     height: 24px;
-    padding: 0;
-    color: #8b949e;
-    background: transparent;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--theme-color);
+    border: 1px solid color-mix(in srgb, var(--theme-color) 40%, transparent);
+    border-radius: 5px;
     transition: background 0.2s, color 0.2s;
 }
-.code-block-toolbar .code-collapse-btn:hover {
-    background: rgba(255, 255, 255, 0.12);
-    color: var(--theme-color);
+.code-block-toolbar:hover .code-collapse-icon {
+    background: color-mix(in srgb, var(--theme-color) 25%, transparent);
 }
-.code-collapse-icon {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1;
-    transition: transform 0.2s;
+/* 折叠提示（默认隐藏，折叠时显示并占满中间空间） */
+.code-collapse-hint {
+    flex: 1;
+    text-align: center;
+    display: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: color-mix(in srgb, var(--theme-color) 75%, #ddd);
 }
+/* 代码本体 */
 .code-block-wrapper pre {
     margin: 0 !important;
     border-radius: 0 0 6px 6px !important;
@@ -159,17 +175,23 @@ html.light-theme #theme-toggle {
 .code-block-wrapper pre.collapsed {
     display: none;
 }
-.code-block-wrapper.collapsed .code-collapse-btn {
-    color: var(--theme-color);
+/* ===== 折叠态：提示居中、箭头始终靠右、虚线底边提示 ===== */
+.code-block-wrapper.collapsed .code-block-toolbar {
+    border-bottom: 1px dashed color-mix(in srgb, var(--theme-color) 55%, transparent);
+    border-radius: 6px;
 }
+.code-block-wrapper.collapsed .code-collapse-hint {
+    display: block;
+}
+/* 亮色主题 */
 html.light-theme .code-block-toolbar {
     background: #f6f8fa;
     border-color: #e1e4e8;
 }
-html.light-theme .code-block-toolbar .code-collapse-btn {
-    color: #57606a;
+html.light-theme .code-block-toolbar:hover {
+    background: color-mix(in srgb, var(--theme-color) 10%, #f6f8fa);
+    border-color: color-mix(in srgb, var(--theme-color) 35%, #e1e4e8);
 }
-html.light-theme .code-block-toolbar .code-collapse-btn:hover {
-    background: rgba(0, 0, 0, 0.08);
-    color: var(--theme-color);
+html.light-theme .code-collapse-hint {
+    color: color-mix(in srgb, var(--theme-color) 70%, #444);
 }

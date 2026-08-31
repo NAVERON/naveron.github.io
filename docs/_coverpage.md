@@ -10,7 +10,7 @@
 
 [开始阅读](README.md)
 [GITHUB](https://github.com/naveron)
-[CODEBERG](https://codeberg.org/NAVERON)
+[CODEBERG](https://codeberg.org/naveron)
 
 
 
