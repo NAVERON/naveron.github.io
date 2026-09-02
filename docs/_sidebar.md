@@ -2,6 +2,7 @@
 
 - 📔 个人日记
   - [我的简历](daily/summary.md)
+  - [环境重建漫谈](daily/env-rebuild.md)
 
 - 💻 编程笔记
   - [我的脚本](program/bash-script-learn-usage.md)
@@ -12,5 +13,6 @@
   - [树莓派学习](program/raspberry-pi-learning.md)
   - [Flatpak学习](program/flatpak-learning.md)
   - [Distrobox学习](program/distrobox-learning.md)
+  - [容器与Podman实践学习](program/container-tech-learning.md)
 
 
