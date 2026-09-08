@@ -2,7 +2,7 @@
 
 > 说明：这份内容是 AI 生成的初稿，后续我根据自己的实际使用经验做了关键修正和补充，重点保留了能真正用起来的配置和注意事项。
 
-## 1. Flatpak 是什么，以及如何配置和使用
+## 1. Flatpak配置和使用
 
 Flatpak 是一种 Linux 应用分发与运行方式，类似 AppImage、Snap 这样的通用应用容器。对我来说，它最实用的地方就是：
 
@@ -57,7 +57,7 @@ flatpak uninstall org.mozilla.firefox
 
 为了提高下载速度，我通常会先把 Flathub 指向国内镜像源；另外如果需要补充应用源，也会顺手加一个类似 `Flatpark` 这样的社区应用中心。它不是官方 `flathub`，但在功能上更像是社区版的 Flatpak 应用源，适合补充和扩展应用选择。
 
-### 2.1 设置 Flathub 国内镜像
+### 2.1 Flathub 国内镜像
 
 以常见镜像站为例：
 
@@ -77,7 +77,7 @@ flatpak remote-modify --url https://mirrors.cernet.edu.cn/flathub/flathub.flatpa
 
 如果你的系统已存在 `flathub`，优先推荐使用 `remote-modify` 来修改 URL，而不是反复删加。
 
-### 2.2 增加 Flatpark 这类社区源
+### 2.2 Flatpark社区源
 
 你提到的“社区版 Flathub”，更准确地说是一个类似应用中心的 Flatpak 源，叫做 `Flatpark`，官网是 <https://flatpark.org/>。这种源本质上就是一个社区应用仓库/应用中心，适合补充和扩展应用选择。
 
@@ -94,7 +94,7 @@ flatpak remote-add --if-not-exists flatpark https://flatpark.org/repo/flatpark.f
 
 一般来说，先把 `flathub` 指到国内镜像就够用了；如果想再补充一些社区应用，`flatpark` 就可以作为一个额外源来启用。
 
-### 2.3 查看当前远程配置
+### 2.3 remote配置
 
 ```bash
 flatpak remotes -v
@@ -114,7 +114,7 @@ flatpak remote-list --verbose
 
 ---
 
-## 3. 设置多个源的优先级
+## 3. 优先级设置
 
 Flatpak 可以配置多个远程源。为了让某个源优先被使用，可以调整优先级。
 
@@ -144,7 +144,7 @@ flatpak remote-modify --prio=2 flatpark
 - 把最稳定、最完整的源设置为最高优先级
 - 例如：`flathub` 最高，`flatpark` 次之
 
-### 3.3 删除不需要的源
+### 3.3 删除源
 
 ```bash
 flatpak remote-delete flatpark
@@ -152,7 +152,7 @@ flatpak remote-delete flatpark
 
 ---
 
-## 4. 安装普通应用的命令
+## 4. 安装应用
 
 ### 4.1 搜索应用
 
@@ -186,7 +186,7 @@ flatpak update
 
 ---
 
-## 5. 特别强调：Motrix Next 只能在 Flatpak 源中找到
+## 5. 特别强调：Motrix Next 只能在 Flatpark 源中找到
 
 Motrix Next 这类应用，通常并不是系统软件包里直接提供的，很多时候只能通过 Flatpak 源搜索和安装。
 
@@ -202,7 +202,7 @@ flatpak search motrix
 
 ```bash
 # 以 Motrix 为例，具体应用 ID 可能以搜索结果为准
-flatpak install flathub com.github.motrixapp.Motrix
+flatpak install flathub ～～com.github.motrixapp.Motrix～～
 ```
 
 注意：

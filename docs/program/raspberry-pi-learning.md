@@ -37,10 +37,10 @@
 
 # 树莓派相关资料
 
-> [https://rpi.thibmaek.com/](https://github.com/thibmaek/awesome-raspberry-pi)：关于树莓派系统、工具和项目资料的整理。
-> [https://github.com/Botspot/pi-apps](https://github.com/Botspot/pi-apps)：树莓派应用商店；如果有开源的树莓派应用，也可以上架到商店，方便其他人使用。
-> [https://github.com/raspberrypi/documentation](https://github.com/raspberrypi/documentation)：树莓派官方文档。
-> [https://github.com/wwj718/awesome-raspberry-pi-zh](https://github.com/wwj718/awesome-raspberry-pi-zh)：中文资料整理。
+> [https://rpi.thibmaek.com/](https://github.com/thibmaek/awesome-raspberry-pi)：关于树莓派系统、工具和项目资料的整理。  
+> [https://github.com/Botspot/pi-apps](https://github.com/Botspot/pi-apps)：树莓派应用商店；如果有开源的树莓派应用，也可以上架到商店，方便其他人使用。  
+> [https://github.com/raspberrypi/documentation](https://github.com/raspberrypi/documentation)：树莓派官方文档。  
+> [https://github.com/wwj718/awesome-raspberry-pi-zh](https://github.com/wwj718/awesome-raspberry-pi-zh)：中文资料整理。  
 > [https://github.com/jveverka/rpi-projects](https://github.com/jveverka/rpi-projects)：一些树莓派驱动和有趣项目实现。
 
 ## 一些有趣的树莓派项目

@@ -1,8 +1,8 @@
 # 我的简历
 
 > 永不言弃 · 保持自信 · 坚守职业素养  
-> [docx简历](../../resource/files/应聘软件工程师-王玉龙-简历.docx)  
-> [docs英文简历](../../resource/files/Apply-for-a-Software-engineer-WangYuLong-Resume.docx)  
+> <a href="../../resource/files/应聘软件工程师-王玉龙-简历.docx" download>中文简历（.docx）</a>
+> <a href="../../resource/files/Apply-for-a-Software-engineer-WangYuLong-Resume.docx" download>英文简历（.docx）</a>
 
 ## 👤 基本信息
 
