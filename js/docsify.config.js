@@ -7,6 +7,8 @@ window.$docsify = {
     coverpage: true,
     basePath: 'docs/',
     homepage: 'README.md',
+    // 让文档内链接按照当前 Markdown 文件所在目录解析
+    relativePath: true,
     loadSidebar: true,
     loadNavbar: true,
     auto2top: true,

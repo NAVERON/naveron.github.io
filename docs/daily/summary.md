@@ -86,7 +86,7 @@ gantt
 
 ## 🛠️ 技能与技术栈
 
-- **后端开发**：Ja `va、Spring Boot` 实现JSP、OAuth2、RPC、MQ、Redis、Zookeeper、MySQL
+- **后端开发**：`Java、Spring Boot` 实现JSP、OAuth2、RPC、MQ、Redis、Zookeeper、MySQL
 - **桌面与仿真**：Java Swing、JavaFX、FXGL
 - **脚本与数据**：Python、PyTorch、Shell
 - **其他**：Git、Linux、SQLite、树莓派
@@ -112,3 +112,7 @@ gantt
 ### 3. 船舶模拟仿真项目
 
 > 致力于完整模拟船舶航行技术、避碰策略与路径规划等核心功能。
+
+---
+
+*最后更新：{docsify-updated}*
