@@ -1,40 +1,3 @@
-
-# 脚本学习和应用
-
-> 作者：WANGYULONG / ERON
-
-## 一些命令行工具
-
-- `jq`, which is a `json parse` shell tool, the offical site : [JQ - A JSON SHELL TOOL](https://stedolan.github.io/jq/)
-- `panda`, a VPN tool to browse World, need pay for that
-- `repo` script, google muti git repositories manager script, can clone a bundle git repos
-
-## 一些脚本
-
-> Let life be beautiful like summer flowers And death like autumn leaves  
-
-### linux初始化环境脚本
-
-> 这是一份比较偏“开发环境一键初始化”的脚本笔记，重点是把常用开发工具、环境变量和基础配置整理成可重复执行的流程  
-
-> 第一次写环境重建的脚本，不是很成功，没有做后期验证：<a href="../../resource/files/sys-config-shell.sh" download>初次尝试独自实现脚本</a>  
-> 后面又重新尝试了各种系统和工具，借助AI实现了一个相对完整的环境重建脚本工具：[环境重建漫谈](../daily/env-rebuild.md)  
-
-### 服务管理脚本
-
-> 开发过程中需要需要许多配套服务运行，脚本一键多服务环境启动：<a href="../../resource/files/services-manager-shell.sh" download>多服务管理脚本</a>  
-> 当前由`podman/docker compse`技术替代：具体实现见：[容器技术漫谈](container-tech-learning.md)  
-
-### vim 配置
-
-> vim 基础配置：<a href="../../resource/files/vim-config.sh" download>vim配置文件</a>  
-
-### `python`实现的自动邮件发送脚本
-
-> 起初借助gist脚本和自己修改实现，现在借助AI优化：<a href="../../resource/files/cli-mail-cmd-old.py" download>python实现的邮件发送脚本</a>  
-> 优化后如下，未实际测试验证  
-
-```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -238,4 +201,3 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-```

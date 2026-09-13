@@ -5,14 +5,14 @@
   - [环境重建漫谈](daily/env-rebuild.md)
 
 - 💻 编程笔记
-  - [我的脚本](program/bash-script-learn-usage.md)
-  - [Git学习](program/git-learning.md)
+  - [脚本工具](program/bash-script-learn-usage.md)
+  - [版本管理工具](program/git-learning.md)
   - [编码规范](program/code-style-guild.md)
-  - [Mathjax学习](program/mathjax-learning.md)
-  - [Mermaid学习](program/mermaid-learning.md)
-  - [树莓派学习](program/raspberry-pi-learning.md)
-  - [Flatpak学习](program/flatpak-learning.md)
-  - [Distrobox学习](program/distrobox-learning.md)
-  - [容器与Podman实践学习](program/container-tech-learning.md)
+  - [Mathjax公式](program/mathjax-learning.md)
+  - [Mermaid绘图](program/mermaid-learning.md)
+  - [树莓派RaspberryPi](program/raspberry-pi-learning.md)
+  - [Flatpak应用](program/flatpak-learning.md)
+  - [Distrobox漫谈](program/distrobox-learning.md)
+  - [容器技术实践](program/container-tech-learning.md)
 
 

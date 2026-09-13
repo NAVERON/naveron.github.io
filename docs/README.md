@@ -23,26 +23,12 @@
 - [naveron.github.io](https://naveron.github.io/)
 - [naveron.codeberg.page](https://naveron.codeberg.page/)
 
-### 代码平台
-
-- [GitHub](https://github.com/naveron)
-- [Codeberg](https://codeberg.org/naveron)
-- [CNB](https://cnb.cool/u/wangyulong.eron)
-
-### 社交平台
-
-- [掘金](https://juejin.cn/user/2930660083507819)
-- [知乎](https://www.zhihu.com/people/wangyulong.eron)
-- [博客园](https://www.cnblogs.com/naveron)
-- [B站](https://space.bilibili.com/89060131)
-
 ### 经典项目
 
 - ✏️ 基础练习
   - 船舶仿真与工具化练习
 - 🚢 实践项目
   - [船舶避碰仿真系列](https://github.com/NAVERON/ShipSimulation)
-  - [脚本与工具集](https://github.com/NAVERON/ERON)
   - [机器学习笔记与应用](https://github.com/NAVERON/MachineLearningNotes)
 
 ### 技能矩阵
@@ -55,11 +41,11 @@
 
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)  ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
 
-### 简历与联系
+### 个人简历
 
-- 个人简历：[应聘软件工程师](daily/summary.md)
+- [软件工程师](daily/summary.md)
 
-> 脚踏实地，自尊自信，保持职业素养，实事求是。欢迎联系我。
+> 脚踏实地，自尊自信，保持职业素养，实事求是。
 
 ---
 
@@ -68,8 +54,8 @@
 | 板块 | 说明 |
 |------|------|
 | 📔 **个人日记** | 简历、总结与个人记录 |
-| 💻 **编程笔记** | Git、编码规范、Mermaid、MathJax、树莓派等 |
-| 🧠 **学习资料** | 技术实践与思考整理 |
+| 💻 **编程笔记** | 编程技术实践分享 |
+| 🧠 **探讨思考** | 杂谈、探讨与思想整理 |
 
 > 💡 更多内容正在持续整理中，欢迎随时回访查看更新。
 
@@ -89,7 +75,3 @@
 | 📁 **代码折叠** | 点击代码块头部即可展开或收起 |
 | 🖼️ **图片缩放** | 点击图片可放大查看细节 |
 | ⏭️ **分页导航** | 页面底部支持上下页快速跳转 |
-
----
-
-*最后更新：{docsify-updated}*

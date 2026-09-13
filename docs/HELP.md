@@ -23,14 +23,12 @@
 │   ├── _404.md             # 404 页面
 │   ├── HELP.md             # 本文件
 │   ├── daily/              # 个人日记
-│   │   └── summary.md
+│   │   └── xxx.md
 │   └── program/            # 编程笔记
-│       ├── my-script.md
-│       ├── git-learning.md
-│       ├── code-style-guild.md
-│       ├── mathjax-learning.md
-│       ├── mermaid-learning.md
-│       └── raspberry-pi-learning.md
+│       ├── xxxxxx.md
+│       ├── xxxxxx.md
+│       ├── xxxxxx.md
+│       └── xxxxxx.md
 └── resource/               # 资源文件
     ├── files/
     └── images/

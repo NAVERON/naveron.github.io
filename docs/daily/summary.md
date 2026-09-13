@@ -1,8 +1,6 @@
 # 我的简历
 
-> 永不言弃 · 保持自信 · 坚守职业素养  
-> <a href="../../resource/files/应聘软件工程师-王玉龙-简历.docx" download>中文简历（.docx）</a>
-> <a href="../../resource/files/Apply-for-a-Software-engineer-WangYuLong-Resume.docx" download>英文简历（.docx）</a>
+> 永不言弃 · 保持自信 · 坚守职业素养
 
 ## 👤 基本信息
 
@@ -11,7 +9,7 @@
 - **求职意向**：软件工程师 / 全栈工程师 / 设计师
 - **联系邮箱**：wangyulong.eron@outlook.com
 - **教育背景**：武汉理工大学·航运学院（硕士 / 本科）｜华中科技大学·计算机（辅修双学位）
-- **简历文件**：[English CV]() · [中文简历]()
+- **简历文件**：<a href="../../resource/files/应聘软件工程师-王玉龙-简历.docx" download>中文简历（.docx）</a> · <a href="../../resource/files/Apply-for-a-Software-engineer-WangYuLong-Resume.docx" download>英文简历（.docx）</a>  
 - **代码平台**：[GitHub](https://github.com/naveron)  · [Codeberg](https://codeberg.org/naveron)  · [CNB](https://cnb.cool/u/wangyulong.eron)
 - **社交平台**：[博客园](https://www.cnblogs.com/naveron/) · [掘金](https://juejin.cn/user/2930660083507819) · [知乎](https://www.zhihu.com/people/wangyulong.eron) · [B站](https://space.bilibili.com/89060131)
 
@@ -83,12 +81,12 @@ gantt
 - **2015**：完成首个完整项目——Java AWT/Swing 电话联系人管理，以及命令行火车票购买程序
 - **2017**：进入创业公司实习，正式接触职场开发
 - **2019**：硕士毕业入职小米（南京应用商店），2022 年 02 月离职
-- **2022**：离职后整理项目与知识点备战求职；12 月入职华为 OD，负责工业软件云项目
+- **2022**：离职后整理项目与知识点备战求职；12 月入职华为 OD， `责` 业软件云项目
 - ...
 
 ## 🛠️ 技能与技术栈
 
-- **后端开发**：Java、Spring Boot、JSP、OAuth2、RPC、MQ、Redis、Zookeeper、MySQL
+- **后端开发**：Ja `va、Spring Boot` 实现JSP、OAuth2、RPC、MQ、Redis、Zookeeper、MySQL
 - **桌面与仿真**：Java Swing、JavaFX、FXGL
 - **脚本与数据**：Python、PyTorch、Shell
 - **其他**：Git、Linux、SQLite、树莓派
@@ -114,5 +112,3 @@ gantt
 ### 3. 船舶模拟仿真项目
 
 > 致力于完整模拟船舶航行技术、避碰策略与路径规划等核心功能。
-
-
