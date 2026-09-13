@@ -26,8 +26,6 @@
 │   │   └── xxx.md
 │   └── program/            # 编程笔记
 │       ├── xxxxxx.md
-│       ├── xxxxxx.md
-│       ├── xxxxxx.md
 │       └── xxxxxx.md
 └── resource/               # 资源文件
     ├── files/
@@ -44,11 +42,38 @@
 3. 如果需要在顶部导航栏显示，编辑 `docs/_navbar.md`
 4. 本地预览满意后提交推送即可
 
-**链接写法：**
+**文档链接写法：**
+
+本站使用 Docsify，内部 Markdown 链接统一以 `docs/` 目录为根目录解析。不要按照当前 Markdown 文件所在目录计算 `../` 路径，否则 Docsify 路由可能出现重复路径。
+
 ```markdown
 - [显示名称](相对路径.md)
-- [我的笔记](program/my-script.md)
+- [脚本笔记](program/bash-script-learn-usage.md)
+- [个人简历](daily/summary.md)
+- [环境重建漫谈](daily/env-rebuild.md#二经验脚本)
 ```
+
+例如，在 `docs/program/` 下的文档中引用 `docs/daily/` 下的页面，仍然直接从 `daily/` 开始写：
+
+```markdown
+[环境重建漫谈](daily/env-rebuild.md#二经验脚本)
+```
+
+不要写成普通 Markdown 文件系统中的形式：
+
+```markdown
+[环境重建漫谈](../daily/env-rebuild.md#二经验脚本)
+```
+
+标题后的 `#二经验脚本` 用于跳转到目标页面中的对应标题。标题修改后，记得同步修改链接中的锚点名称。
+
+资源文件的路径则按照当前 Markdown 文件的实际目录计算。例如，`docs/program/` 下的文档引用项目根目录的资源文件时，需要使用：
+
+```markdown
+<a href="../../resource/files/example.sh" download>下载脚本</a>
+```
+
+也就是说：Markdown 文档链接遵循 Docsify 的 `docs/` 根路径规则，图片、脚本和下载文件等静态资源链接仍遵循普通文件系统的相对路径规则。
 
 ---
 
