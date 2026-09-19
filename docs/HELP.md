@@ -46,7 +46,10 @@
 
 本站使用 Docsify，内部 Markdown 链接统一以 `docs/` 目录为根目录解析。不要按照当前 Markdown 文件所在目录计算 `../` 路径，否则 Docsify 路由可能出现重复路径。
 
+首页是一个例外：侧边栏和顶部导航应使用 `/`，让 Docsify 始终把它识别为根路由首页。
+
 ```markdown
+- [文档首页](/)
 - [显示名称](相对路径.md)
 - [脚本笔记](program/bash-script-learn-usage.md)
 - [个人简历](daily/summary.md)

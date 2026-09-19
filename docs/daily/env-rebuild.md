@@ -51,7 +51,7 @@ flowchart LR
 于是我开始写自动化脚本：把软件安装清单、配置写入、目录创建等操作固化成一段段 Shell，试图做到「跑一遍脚本，环境回来大半」。
 
 > <a href="../../resource/files/system-rebuild-shell.sh" download>debian系、rh系重装脚本</a>
- 
+> <a href="../../resource/files/system-rebuild-python.py" download>debian系、rh系重装脚本-python实现的版本</a>
 
 ### 当时的收获
 

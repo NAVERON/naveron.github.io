@@ -1,4 +1,6 @@
-- [📖 文档首页](README.md)
+- 🏠 文档首页
+  - [🇨🇳 封面](/)
+  - [📖 文档首页](README.md)
 
 - 📔 个人日记
   - [我的简历](daily/summary.md)
@@ -14,5 +16,10 @@
   - [Flatpak应用](program/flatpak-learning.md)
   - [Distrobox漫谈](program/distrobox-learning.md)
   - [容器技术实践](program/container-tech-learning.md)
+
+- 📚 知识沉淀
+  - [问题整理笔记](knowledge/problem-note.md)
+  - [知识图谱](knowledge/knowledge-map.md)
+  - [知识库](knowledge/knowledge-base.md)
 
 

@@ -1,6 +1,7 @@
 <!-- _navbar.md -->
 
 - 📖 文档
+    - [封面](/)
     - [首页](README.md)
     - [帮助](HELP.md)
 
