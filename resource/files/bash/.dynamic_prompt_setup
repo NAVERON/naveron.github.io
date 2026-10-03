@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+
+# =====================================================================
+# 🌐 自适应高辨识度 Prompt (自动区分 Host / Distrobox 容器 / venv / nix-shell)
+# =====================================================================
+PROMPT_DIRTRIM=3 # 限制目录显示层级，防止路径过长把提示符挤出屏幕 (保留最后3层)
+
+# 禁用 Python venv 默认的前缀提示，避免重复显示
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+_dynamic_prompt_setup() {
+    local R='\[\e[0m\]'
+    local B='\[\e[1m\]'
+
+    # ===== 判断是否在 venv 虚拟环境中，取一个简短醒目的标识 =====
+    local venv_tag=""
+    if [ -n "$VIRTUAL_ENV" ]; then
+        local venv_name=$(basename "$VIRTUAL_ENV")
+        # 如果是通用的 .venv / venv，就显示父目录名，更有辨识度
+        if [ "$venv_name" = ".venv" ] || [ "$venv_name" = "venv" ]; then
+            venv_name=$(basename "$(dirname "$VIRTUAL_ENV")")/.venv
+        fi
+        # 紫色(165) + 🐍 图标
+        venv_tag=" ${B}\[\e[38;5;165m\]<🐍${venv_name}>${R}"
+    fi
+
+    # ===== 新增：判断是否在 nix-shell / nix develop 环境中 =====
+    local nix_tag=""
+    if [ -n "$IN_NIX_SHELL" ]; then
+        local nix_name="nix-shell"
+        if [ "$IN_NIX_SHELL" = "pure" ]; then
+            nix_name="nix-pure"
+        fi
+        # 紫色(135，和 venv 165 同色系但有区分) + ❄️ 图标
+        nix_tag=" ${B}\[\e[38;5;135m\]<❄️${nix_name}>${R}"
+    fi
+
+    # 核心判断：兼容 Distrobox 变量、Podman (.containerenv) 和 Docker (.dockerenv)
+    if [ -n "$DISTROBOX_NAME" ] || [ -f /run/.containerenv ] || [ -f /.dockerenv ]; then
+
+        # ================= 📦 容器环境 (暖色调 / 沙盒警示) =================
+
+        # 1. 智能获取容器名称
+        local box_name="${DISTROBOX_NAME}"
+        if [ -z "$box_name" ] && [ -f /run/.containerenv ]; then
+            box_name=$(grep -m 1 '^name=' /run/.containerenv 2>/dev/null | cut -d= -f2 | tr -d '"')
+        fi
+        box_name="${box_name:-container}"
+
+        # 2. 获取容器底层 OS 简称 (如 arch, ubuntu, fedora) 作为额外环境信息
+        local os_id="linux"
+        if [ -f /etc/os-release ]; then
+            os_id=$(. /etc/os-release && echo "${ID:-linux}")
+        fi
+
+        # 256色暖色调配色 (醒目橙 / 橙黄 / 柔和红 / 柔和黄)
+        local C_EMOJI='\[\e[38;5;208m\]'   # 醒目橙 (Emoji & 外层括号)
+        local C_BOX='\[\e[38;5;214m\]'     # 橙黄 (容器名)
+        local C_OS='\[\e[38;5;203m\]'      # 柔和红 (OS 简称)
+        local C_USER='\[\e[38;5;250m\]'    # 浅灰 (用户名)
+        local C_DIR='\[\e[38;5;221m\]'     # 柔和黄 (当前目录)
+        local C_ARR='\[\e[38;5;208m\]'     # 醒目橙 (命令箭头)
+
+        # 差异化排版：圆括号包裹容器名，方括号包裹 OS，去掉 @host  + venv/nix 标识
+        PS1="${B}${C_EMOJI}📦 (${C_BOX}${box_name}${C_EMOJI}) [${C_OS}${os_id}${C_EMOJI}]${R}${nix_tag}${venv_tag} ${C_USER}\u${R}:${C_DIR}\w${R}\n${C_ARR}❯${R} "
+
+    else
+
+        # ================= 🏠 宿主机环境 (冷色调 / 稳重安全) =================
+
+        # 256色冷色调配色 (柔和绿 / 柔和青 / 柔和蓝)
+        local C_EMOJI='\[\e[38;5;114m\]'   # 柔和绿 (Emoji & 括号)
+        local C_HOST='\[\e[38;5;117m\]'    # 柔和青 (主机名)
+        local C_USER='\[\e[38;5;250m\]'    # 浅灰 (用户名)
+        local C_DIR='\[\e[38;5;110m\]'     # 柔和蓝 (当前目录)
+        local C_ARR='\[\e[38;5;114m\]'     # 柔和绿 (命令箭头)
+
+        # 经典排版：方括号包裹主机名  + venv/nix 标识
+        PS1="${B}${C_EMOJI}🏠 [${C_HOST}\h${C_EMOJI}]${R}${nix_tag}${venv_tag} ${C_USER}\u${R}:${C_DIR}\w${R}\n${C_ARR}❯${R} "
+    fi
+}
+
+# 注入 Bash 底层钩子，确保 100% 生效且不被系统默认配置覆盖
+if [[ ! "$PROMPT_COMMAND" == *"_dynamic_prompt_setup"* ]]; then
+    PROMPT_COMMAND="_dynamic_prompt_setup; $PROMPT_COMMAND"
+fi
+
