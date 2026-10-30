@@ -131,9 +131,29 @@ docsify serve .
 
 ---
 
+## 🌐 CDN 资源镜像策略
+
+> 当前站点采用双源回退方案，避免单一 CDN 失效导致页面白屏。
+
+- 主源：`https://jsdelivr.topthink.com`
+- 备用：`https://cdn.jsdelivr.net`
+- 资源加载失败时，页面会自动回退到备用源
+
+示例写法：
+
+```html
+<link rel="stylesheet" href="https://jsdelivr.topthink.com/npm/docsify@5/dist/themes/core.min.css"
+    onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css'">
+
+<script src="https://jsdelivr.topthink.com/npm/docsify@5/dist/docsify.min.js"
+    onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/docsify@5/dist/docsify.min.js'"></script>
+```
+
+---
+
 ## 📦 依赖清单
 
-> 全部第三方资源均通过 `cdn.jsdmirror.com`（jsdelivr 中国镜像）加载，国内访问更快。
+> 第三方资源通过双源 CDN 回退加载，兼顾国内访问速度与可用性。
 
 | 资源 | 版本 | 用途 |
 |------|------|------|
