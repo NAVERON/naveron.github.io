@@ -137,8 +137,6 @@ UUID=你的UUID值  /mnt/数据中心  ntfs-3g  defaults,nofail,uid=1000,gid=100
 
 > 结论一句话：先判断文件系统类型，再用 `ntfsfix` / `fsck` / `e2fsck` 修复，最后改掉“直接拔线”的习惯，问题就能稳定解决。
 
+---
 
-
-
-
-
+*更新日期：{docsify-updated}*

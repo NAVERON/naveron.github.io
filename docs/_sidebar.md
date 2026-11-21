@@ -1,10 +1,13 @@
 - 🏠 文档首页
   - [封面](/)
   - [首页](README.md)
+  - [帮助](HELP.md)
 
 - 📔 个人日记
   - [我的简历](daily/summary.md)
   - [环境重建漫谈](daily/env-rebuild.md)
+  - [移动硬盘修复记事](daily/repair-disk.md)
+  - [ArchLinux安装记事](daily/archlinux-install-record.md)
 
 - 💻 编程笔记
   - [脚本工具](program/bash-script-learn-usage.md)

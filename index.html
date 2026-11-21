@@ -25,8 +25,12 @@
 <body class="sidebar-chevron-right">
     <div id="app"></div>
 
-    <!-- ===== Docsify 配置（含自定义插件） ===== -->
+    <!-- ===== Docsify 配置与独立插件 ===== -->
     <script src="./js/docsify.config.js"></script>
+    <script src="./js/plugins/docsify-theme-toggle.js"></script>
+    <script src="./js/plugins/docsify-mermaid-mathjax.js"></script>
+    <script src="./js/plugins/docsify-code-collapse.js"></script>
+    <script src="./js/plugins/docsify-pwa.js"></script>
 
     <!-- ===== MathJax 配置 ===== -->
     <script src="./js/mathjax.config.js"></script>
@@ -51,9 +55,7 @@
     <script src="https://jsdelivr.topthink.com/npm/mermaid@11/dist/mermaid.min.js"
         onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js'"></script>
 
-    <!-- ===== 主题切换按钮 ===== -->
-    <button id="theme-toggle" title="切换主题">☀️</button>
-    <script src="./js/theme-toggle.js"></script>
+    <!-- ===== 主题切换按钮由插件创建 ===== -->
 </body>
 
 </html>
