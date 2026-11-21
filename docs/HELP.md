@@ -12,9 +12,13 @@
 ├── css/
 │   └── custom.css          # 全部自定义样式（主题色、封面、代码折叠等）
 ├── js/
-│   ├── docsify.config.js   # Docsify 配置与自定义插件（Mermaid/MathJax/代码折叠）
+│   ├── docsify.config.js   # Docsify 全局配置
 │   ├── mathjax.config.js   # MathJax 配置
-│   └── theme-toggle.js     # 暗色/亮色主题切换逻辑
+│   └── plugins/            # 独立 Docsify 自定义插件
+│       ├── docsify-mermaid-mathjax.js
+│       ├── docsify-code-collapse.js
+│       ├── docsify-theme-toggle.js
+│       └── docsify-pwa.js
 ├── docs/                   # 所有文档内容
 │   ├── README.md           # 首页 / 文档首页
 │   ├── _sidebar.md         # 侧边栏导航配置
@@ -32,6 +36,37 @@
     └── images/
         ├── design/  letters/  posters/  tools/
 ```
+
+---
+
+## 🧩 自定义插件架构存档
+
+本站自定义功能采用独立 Docsify 插件实现，并统一放在 `js/plugins/` 目录中。主入口应保持精简：加载配置、插件和框架资源，不直接堆积页面业务逻辑。
+
+| 插件 | 职责 | Docsify 生命周期 |
+|------|------|------------------|
+| `docsify-theme-toggle.js` | 明暗主题切换及偏好保存 | `mounted` |
+| `docsify-mermaid-mathjax.js` | Mermaid 转换、Mermaid/MathJax 渲染 | `beforeEach`、`doneEach` |
+| `docsify-code-collapse.js` | 代码块折叠与键盘交互 | `doneEach` |
+| `docsify-pwa.js` | 注册站点根目录 Service Worker | `ready` |
+
+加载顺序约定：
+
+1. `js/docsify.config.js`：全局配置
+2. `js/plugins/*.js`：独立插件注册
+3. `docsify.min.js`：启动 Docsify
+4. 主题、渲染及交互脚本按页面所需加载
+
+新增插件时应遵循：
+
+- 使用官方生命周期钩子，不在插件外直接操作 Docsify 内部状态
+- 每个插件只负责一个明确功能
+- 文件名采用 `docsify-[功能名].js`
+- 在插件末尾通过 `window.$docsify.plugins` 注册
+- 在 `index.html` 中显式加载，并在 `sw.js` 的预缓存清单中加入需要离线的插件文件
+- 修改 `sw.js` 后，必须递增 `RUNTIME` 缓存版本；旧缓存会在下一次激活时清理
+
+PWA 属于浏览器基础设施，不属于文档内容渲染，因此仍保留独立的根目录 `sw.js`。插件负责注册它，缓存策略与资源白名单集中维护在 `sw.js`。
 
 ---
 
@@ -164,6 +199,16 @@ docsify serve .
 | docsify-copy-code | 3.x | 代码复制 |
 | docsify-pagination | 2.x | 分页导航 |
 | zoom-image | v5 内置 | 图片缩放 |
+
+---
+
+## 📱 PWA 离线支持
+
+> 参考官方文档：https://docsify.js.org/#/zh-cn/pwa
+
+- 已启用 Service Worker 离线缓存，站点可在网络不稳定或断网时继续使用已缓存页面
+- 缓存逻辑位于根目录 `sw.js`，由 `js/plugins/docsify-pwa.js` 插件负责注册
+- 修改缓存资源或更新站点后，需要同步调整 `sw.js` 中的缓存版本
 
 ---
 
